@@ -1,0 +1,32 @@
+[
+    {
+      "brandName": "Apple",
+      "id": 1,
+      "brandImage": "https://gadgetandgear.com/img/shop-by-brand-logos/apple-logo.b2a3b2f7.png"
+    },
+    {
+      "brandName": "Samsung",
+      "id": 2,
+      "brandImage": "https://gadgetandgear.com/img/shop-by-brand-logos/samsung--logo.6cbd101b.png"
+    },
+    {
+      "brandName": "Oppo",
+      "id": 3,
+      "brandImage": "https://gadgetandgear.com/img/shop-by-brand-logos/oppo--logo.c73ce52e.png"
+    },
+    {
+      "brandName": "OnePlus",
+      "id": 4,
+      "brandImage": "https://gadgetandgear.com/img/shop-by-brand-logos/one-plus-logo.a1b7ea75.png"
+    },
+    {
+      "brandName": "Realme",
+      "id": 5,
+      "brandImage": "https://gadgetandgear.com/img/shop-by-brand-logos/realme-logo.d6683117.png"
+    },
+    {
+      "brandName": "Vivo",
+      "id": 6,
+      "brandImage": "https://gadgetandgear.com/img/shop-by-brand-logos/vivo-logo.2838a9fe.png"
+    }
+  ]
