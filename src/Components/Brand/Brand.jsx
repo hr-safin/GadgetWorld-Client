@@ -14,7 +14,10 @@ const Brand = () => {
         })
     }, [])
     return (
-        <div  className=' pt-20 pb-28'>
+        <div
+        data-aos="fade-up"
+     data-aos-duration="2000"
+        className=' pt-20 pb-28'>
             <h2 className=' text-center tracking-tight text-3xl font-bold pb-10'>SHOP BY BRANDS</h2>
             <div  className=' grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-10 lg:px-40 px-6'>
                 {brand.map(data => <SingleBrand data={data} key={data.id} />)}

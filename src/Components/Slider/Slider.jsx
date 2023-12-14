@@ -6,7 +6,10 @@ const Slide = () => {
     
 
   return (
-    <div className=" lg:px-24 px-6 pb-20">
+    <div
+    data-aos="fade-up"
+     data-aos-duration="2000"
+    className=" lg:px-24 px-6 pb-20">
         <div className="carousel w-full ">
   <div id="slide1" className="carousel-item relative w-full">
     <img src="https://d61s2hjse0ytn.cloudfront.net/images/web/slider/Pixel_8_Pro_Banner.webp" className="w-full rounded-md" />

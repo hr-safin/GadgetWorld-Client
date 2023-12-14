@@ -3,7 +3,10 @@ import React from 'react';
 const Contact = () => {
     window.scrollTo(0,0)
     return (
-        <div  >
+        <div 
+        data-aos="fade-up"
+     data-aos-duration="2000"
+        >
             <section  class="">
   <div class="pb-20 lg:pb-16 lg:pt-6 px-4 mx-auto max-w-screen-sm">
       <h2 class="mb-4 text-4xl tracking-tight font-bold text-center ">Contact Us</h2>

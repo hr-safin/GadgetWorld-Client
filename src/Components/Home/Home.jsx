@@ -9,6 +9,8 @@ import Banner4 from "./Banner4";
 import Contact from "../Contact/Contact";
 import UpArraow from "../UpArraow2";
 import UpArrow from "../Update/UpArrow";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 
 
 export default function Home() {
@@ -18,17 +20,31 @@ export default function Home() {
   return (
 
     <>
+     <div data-aos="fade-up"
+     data-aos-duration="3000">
+     <Carousel
+     
+     className=" text-center flex justify-center flex-col lg:px-24">
+                <div>
+                    <img src="https://www.gadgetmonkeybd.com/public/uploads/all/WOh2tZ5sVdJpSCu39fxLa0FFIRCbkhmop9VewU9Y.jpg" />
+                   
+                </div>
+                <div>
+                    <img src="https://www.gadgetmonkeybd.com/public/uploads/all/AT82vTRU91c5z4ftoLXSassyJQl07XDoBGtvC1Kz.jpg" />
+                  
+                </div>
+                <div>
+                    <img src="https://www.gadgetmonkeybd.com/public/uploads/all/1WjNGP6SsssOdaK4wGWY3o0jIiTn4fOMDIsWVUlg.jpg" />
+                  
+                </div>
+                <div>
+                    <img src="https://www.gadgetmonkeybd.com/public/uploads/all/JMwviK7LCMV0aJ9DbRMpHFJU9GmFO3G8g7l53LMc.jpg" />
+                  
+                </div>
+            </Carousel>
+     </div>
     
-    <div   className=' lg:my-0 my-20 mb-20 px-6 lg:px-24 lg:h-[80vh] md:px-10 flex flex-col lg:flex-row justify-center gap-20 lg:gap-44 items-center'>
-            <div>
-                <h2 className='text-3xl  lg:text-5xl font-bold '>Tech Essentials at <br />Gadget World</h2>
-                <p className=' text-gray-600 lg:w-[500px] pt-6 pb-6'>Discover the Ultimate Tech Playground at Gadget World: Your One-Stop Shop for Apple, Samsung, OnePlus, Google, and More!  </p>
-                <Link to="/register"><button className=' bg-blue-700 text-white px-6 py-3 rounded-lg '>Get Started</button></Link>
-            </div>
-            <div>
-                <img className='lg:w-[100%] md:w-[70%] mx-auto' src="https://www.91-cdn.com/hub/wp-content/uploads/2022/12/Apple-Products-expected-to-launch-in-2023.png" alt='User'/>
-            </div>
-        </div>
+   
 
       <Banner />
 
@@ -47,3 +63,15 @@ export default function Home() {
     
   );
 }
+
+
+{/* <div   className=' lg:my-0 my-20 mb-20 px-6 lg:px-24 lg:h-[80vh] md:px-10 flex flex-col lg:flex-row justify-center gap-20 lg:gap-44 items-center'>
+<div>
+    <h2 className='text-3xl  lg:text-5xl font-bold '>Tech Essentials at <br />Gadget World</h2>
+    <p className=' text-gray-600 lg:w-[500px] pt-6 pb-6'>Discover the Ultimate Tech Playground at Gadget World: Your One-Stop Shop for Apple, Samsung, OnePlus, Google, and More!  </p>
+    <Link to="/register"><button className=' bg-blue-700 text-white px-6 py-3 rounded-lg '>Get Started</button></Link>
+</div>
+<div>
+    <img className='lg:w-[100%] md:w-[70%] mx-auto' src="https://www.91-cdn.com/hub/wp-content/uploads/2022/12/Apple-Products-expected-to-launch-in-2023.png" alt='User'/>
+</div>
+</div> */}

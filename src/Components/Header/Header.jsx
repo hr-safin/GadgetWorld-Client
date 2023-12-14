@@ -101,6 +101,7 @@ export default function NavbarActionButtonPreview() {
             </button>
             <ul className=" hidden sm:flex gap-6 justify-center bottom-8 absolute right-16 items-center lg:hidden">
                 <NavLink className="text-gray-600 text-sm" to="/">Home</NavLink>
+                <NavLink className="text-gray-600 text-sm" to="/blog">Blog</NavLink>
                 <NavLink className="text-gray-600 text-sm" to="/addProduct">AddProduct</NavLink>
                 <NavLink className="text-gray-600 text-sm" to="/myCart">MyCart</NavLink>
                 <input onChange={toggle} type="checkbox" className="toggle toggle-sm" />
@@ -109,7 +110,7 @@ export default function NavbarActionButtonPreview() {
             <ul
               role="menubar"
               aria-label="Select page"
-              className={`absolute top-0 left-0 z-[-1] h-[28.5rem] w-full justify-center overflow-hidden  overflow-y-auto overscroll-contain  bg-white/90 px-8 pb-12 pt-24 font-medium transition-[opacity,visibility] duration-300 lg:visible lg:relative lg:top-0  lg:z-0 lg:flex lg:h-full lg:w-auto lg:items-stretch lg:overflow-visible lg:bg-white/0 lg:px-0 lg:py-0  lg:pt-0 lg:opacity-100 ${
+              className={`absolute top-0 left-0 z-[-1] h-[28.5rem] w-full justify-center overflow-hidden  overflow-y-auto overscroll-contain  bg-white/90 px-5 pb-12 pt-24 font-medium transition-[opacity,visibility] duration-300 lg:visible lg:relative lg:top-0  lg:z-0 lg:flex lg:h-full lg:w-auto lg:items-stretch lg:overflow-visible lg:bg-white/0 lg:px-0 lg:py-0  lg:pt-0 lg:opacity-100 ${
                 isToggleOpen
                   ? "visible opacity-100 backdrop-blur-sm"
                   : "invisible opacity-0"
@@ -119,7 +120,7 @@ export default function NavbarActionButtonPreview() {
                 <NavLink
                   to="/"
                   
-                  className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-blue-500 focus:text-blue-600 focus:outline-none focus-visible:outline-none lg:px-8 cursor-pointer"
+                  className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-blue-500 focus:text-blue-600 focus:outline-none focus-visible:outline-none lg:px-4 cursor-pointer"
                   
                 >
                   <span>Home</span>
@@ -127,9 +128,29 @@ export default function NavbarActionButtonPreview() {
               </li>
               <li onClick={() =>setIsToggleOpen(!true)}  className="flex items-stretch">
                 <NavLink
+                 to="/product"
+                  
+                  className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-blue-500 focus:text-blue-600 focus:outline-none focus-visible:outline-none lg:px-4  cursor-pointer"
+                  
+                >
+                  <span>Add Product</span>
+                </NavLink>
+              </li>
+              <li onClick={() =>setIsToggleOpen(!true)}  className="flex items-stretch">
+                <NavLink
                  to="/addProduct"
                   
-                  className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-blue-500 focus:text-blue-600 focus:outline-none focus-visible:outline-none lg:px-8  cursor-pointer"
+                  className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-blue-500 focus:text-blue-600 focus:outline-none focus-visible:outline-none lg:px-4  cursor-pointer"
+                  
+                >
+                  <span>Blog</span>
+                </NavLink>
+              </li>
+              <li onClick={() =>setIsToggleOpen(!true)}  className="flex items-stretch">
+                <NavLink
+                 to="/addProduct"
+                  
+                  className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-blue-500 focus:text-blue-600 focus:outline-none focus-visible:outline-none lg:px-4  cursor-pointer"
                   
                 >
                   <span>Add Product</span>
@@ -149,7 +170,7 @@ export default function NavbarActionButtonPreview() {
 
               
               
-              <div onClick={() =>setIsToggleOpen(!true)} className="flex  lg:flex-row lg:items-center flex-col gap-3  lg:pr-8 pr-20">
+              <div onClick={() =>setIsToggleOpen(!true)} className="flex  lg:flex-row lg:items-center flex-col gap-3  lg:pr-4 pr-20">
               <Link to="/myCart">
       <label tabIndex={0} className="btn btn-ghost btn-circle">
      
