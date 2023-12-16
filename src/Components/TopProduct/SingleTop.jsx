@@ -4,7 +4,7 @@ const SingleTop = ({item}) => {
     return (
         <div class="w-[350px]  bg-white border border-gray-200 rounded-lg shadow ">
    
-        <img class="p-8 w-72 mx-auto rounded-t-lg" src={item.image} alt="product image" />
+        <img class="p-8 w-72 h-72  mx-auto rounded-t-lg" src={item.image} alt="product image" />
    
     <div class="px-5 pb-5">
         <a href="#">

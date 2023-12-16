@@ -57,10 +57,8 @@ export default function Home() {
 
       {/* <Banner3 /> */}
       <Banner4 />
-      <Slide />
-
       <Contact />
-      <UpArrow />
+    
          
         </>
          

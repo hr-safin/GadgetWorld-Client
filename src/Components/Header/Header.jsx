@@ -68,7 +68,10 @@ export default function NavbarActionButtonPreview() {
             >
               {/* <img  className="lg:w-[340px] lg:flex hidden w-[500px] hover:scale-105 duration-500 ease-in-out" src="https://i.pinimg.com/564x/b3/51/9a/b3519ae27424d598a1a1b94966d5bc6e.jpg" /> */}
 
-              <h2 className="">Gadget Word</h2>
+              <div className=' flex items-center gap-2'>
+          <img className=' w-10 rounded-2xl' src="https://play-lh.googleusercontent.com/elVl_dXmZaqDnJq09HK4rrTtbMyhTPZdK22LNILrkigsjyA-YScs9LYkE4W7vMxq8rtx" alt="" />
+            <h2 className=' text-2xl text-gray-800 font-bold'>Gadget World</h2>
+          </div>
              
             </Link>
             {/*      <!-- Mobile trigger --> */}
