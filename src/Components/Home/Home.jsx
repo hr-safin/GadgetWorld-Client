@@ -13,17 +13,28 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from 'react-responsive-carousel';
 import TopProduct from "../TopProduct/TopProduct";
 import NewArival from "../NewArival/NewArival";
+import Slider from 'react-slick';
 
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 
 export default function Home() {
   window.scrollTo(0,0)
 
+  const settings = {
+    autoplay: true,
+    autoplaySpeed: 2000,
+    dots: true,
+    arrows: false,
+    infinite: true,
+  };
+
   // const {name} = useContext(AuthProvideContext)
   return (
 
     <>
-     <div data-aos="fade-up"
+     {/* <div data-aos="fade-up"
      data-aos-duration="3000">
      <Carousel
      
@@ -46,7 +57,28 @@ export default function Home() {
                 </div>
             </Carousel>
      </div>
-    
+     */}
+     <div className=" pb-10">
+
+     <Slider className="  pt-6" {...settings}>
+      <div>
+        <img className="w-full lg:px-24" src="https://www.gadgetmonkeybd.com/public/uploads/all/WOh2tZ5sVdJpSCu39fxLa0FFIRCbkhmop9VewU9Y.jpg" alt="Product 1" />
+        
+      </div>
+      <div>
+        <img className="w-full lg:px-24" src="https://www.gadgetmonkeybd.com/public/uploads/all/AT82vTRU91c5z4ftoLXSassyJQl07XDoBGtvC1Kz.jpg" alt="Product 2" />
+       
+      </div>
+      <div>
+        <img className="w-full lg:px-24" src="https://www.gadgetmonkeybd.com/public/uploads/all/JMwviK7LCMV0aJ9DbRMpHFJU9GmFO3G8g7l53LMc.jpg" alt="Product 3" />
+      </div>
+      <div>
+                    <img className="w-full lg:px-24" src="https://www.gadgetmonkeybd.com/public/uploads/all/1WjNGP6SsssOdaK4wGWY3o0jIiTn4fOMDIsWVUlg.jpg" />
+                  
+                </div>
+    </Slider>
+     </div>
+
    
 
       <Banner />
