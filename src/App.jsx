@@ -74,7 +74,7 @@ function App() {
     }
   ])
 
-  return loading ? <div className=" text-blue-600 text-3xl bg-gray-800 h-screen flex justify-center items-center">
+  return loading ? <div className=" text-blue-600 text-3xl bg-gray-900 h-screen flex justify-center items-center">
      <span className="loading loading-dots loading-lg"></span>
   </div> : (
     <AuthContext>
