@@ -24,7 +24,7 @@ export default function Home() {
      data-aos-duration="3000">
      <Carousel
      
-     className=" text-center flex justify-center flex-col lg:px-24">
+     className=" pt-4  text-center flex justify-center flex-col lg:px-24">
                 <div>
                     <img src="https://www.gadgetmonkeybd.com/public/uploads/all/WOh2tZ5sVdJpSCu39fxLa0FFIRCbkhmop9VewU9Y.jpg" />
                    

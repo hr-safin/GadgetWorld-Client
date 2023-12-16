@@ -53,22 +53,22 @@ export default function NavbarActionButtonPreview() {
   return (
     <>
       {/*<!-- Component: Navbar with --> */}
-      <header  className="border-b-1 relative z-20 w-full border-b  after:absolute after:top-full after:left-0 after:z-10 after:block after:h-px after:w-full after:bg-slate-200  dark:border-gray-900 lg:border-slate-200 lg:backdrop-blur-sm lg:after:hidden px-4 lg:px-16">
+      <header  className="border-b-1 relative z-20 w-full border-b  after:absolute after:top-full after:left-0 after:z-10 after:block after:h-px after:w-full after:bg-slate-200  dark:border-gray-900 lg:border-slate-200 lg:backdrop-blur-sm lg:after:hidden lg:px-[90px]">
         <div className="relative mx-auto max-w-full px-2 lg:max-w-5xl xl:max-w-7xl 2xl:max-w-[96rem]">
           <nav
             aria-label="main navigation"
-            className="flex h-[5.5rem] items-stretch justify-between font-medium text-slate-600"
+            className="flex h-[4.5rem] items-stretch justify-between font-medium text-slate-600"
             role="navigation"
           >
             {/*      <!-- Brand logo --> */}
             <Link
               to="/"
-              className="flex items-center text-gray-600 font-semibold  gap-2 whitespace-nowrap py-3 text-2xl lg:text-3xl focus:outline-none lg:flex-1"
+              className="flex items-center text-gray-800 font-bold  gap-2 whitespace-nowrap py-3 text-2xl lg:text-3xl focus:outline-none lg:flex-1"
               href="javascript:void(0)"
             >
               {/* <img  className="lg:w-[340px] lg:flex hidden w-[500px] hover:scale-105 duration-500 ease-in-out" src="https://i.pinimg.com/564x/b3/51/9a/b3519ae27424d598a1a1b94966d5bc6e.jpg" /> */}
 
-              <h2 className=""><span>Gadget</span> <span className=" text-blue-500">World</span></h2>
+              <h2 className="">Gadget Word</h2>
              
             </Link>
             {/*      <!-- Mobile trigger --> */}
@@ -120,7 +120,7 @@ export default function NavbarActionButtonPreview() {
                 <NavLink
                   to="/"
                   
-                  className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-blue-500 focus:text-blue-600 focus:outline-none focus-visible:outline-none lg:px-4 cursor-pointer"
+                  className="flex text-base items-center gap-2 py-4 transition-colors duration-300 text-gray-700 hover:text-gray-500 focus:text-gray-600 focus:outline-none focus-visible:outline-none lg:px-4 cursor-pointer"
                   
                 >
                   <span>Home</span>
@@ -130,17 +130,17 @@ export default function NavbarActionButtonPreview() {
                 <NavLink
                  to="/product"
                   
-                  className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-blue-500 focus:text-blue-600 focus:outline-none focus-visible:outline-none lg:px-4  cursor-pointer"
+                  className="flex text-base items-center gap-2 py-4 transition-colors duration-300  text-gray-700 hover:text-gray-500 focus:text-gray-600 focus:outline-none focus-visible:outline-none lg:px-4  cursor-pointer"
                   
                 >
-                  <span>Add Product</span>
+                  <span>Brand</span>
                 </NavLink>
               </li>
               <li onClick={() =>setIsToggleOpen(!true)}  className="flex items-stretch">
                 <NavLink
-                 to="/addProduct"
+                 to="/blog"
                   
-                  className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-blue-500 focus:text-blue-600 focus:outline-none focus-visible:outline-none lg:px-4  cursor-pointer"
+                  className="flex items-center gap-2 py-4 transition-colors duration-300  text-gray-700 hover:text-gray-500 focus:text-gray-600 focus:outline-none focus-visible:outline-none lg:px-4  cursor-pointer"
                   
                 >
                   <span>Blog</span>
@@ -150,7 +150,7 @@ export default function NavbarActionButtonPreview() {
                 <NavLink
                  to="/addProduct"
                   
-                  className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-blue-500 focus:text-blue-600 focus:outline-none focus-visible:outline-none lg:px-4  cursor-pointer"
+                  className="flex items-center gap-2 py-4 transition-colors duration-300  text-gray-700 hover:text-gray-500 focus:text-gray-600 focus:outline-none focus-visible:outline-none lg:px-4  cursor-pointer"
                   
                 >
                   <span>Add Product</span>
@@ -181,15 +181,15 @@ export default function NavbarActionButtonPreview() {
         </div>
       </label>
       </Link>
-      <div className=" lg:pl-3 lg:pr-4 flex items-center">
+      {/* <div className=" lg:pl-3 lg:pr-4 flex items-center">
       <input onChange={toggle} type="checkbox"  className="toggle toggle-sm"  />
-      </div>
+      </div> */}
       </div>
       
       
      
               <div onClick={() =>setIsToggleOpen(!true)} className=" pt-5 flex lg:hidden items-center ml-auto lg:ml-0 lg:p-0">
-              <Link to="/login" className="inline-flex h-10 items-center justify-center gap-2 whitespace-nowrap rounded bg-blue-500 px-5 text-sm font-medium tracking-wide text-white shadow-md shadow-emerald-200 transition duration-300 hover:bg-blue-600 hover:shadow-sm hover:shadow-emerald-200 focus:bg-blue-700 focus:shadow-sm focus:shadow-emerald-200 focus-visible:outline-none disabled:cursor-not-allowed disabled:border-blue-300 disabled:bg-emerald-300 disabled:shadow-none">
+              <Link to="/login" className="inline-flex h-10 items-center justify-center gap-2 whitespace-nowrap rounded bg-gray-800  px-5 text-sm font-medium tracking-wide text-white shadow-md shadow-emerald-200 transition duration-300  hover:shadow-sm hover:shadow-emerald-200 focus:shadow-sm focus:shadow-emerald-200 focus-visible:outline-none disabled:cursor-not-allowed disabled:border-blue-300 disabled:bg-emerald-300 disabled:shadow-none">
                 <span>Sign In</span>
               </Link>
             </div>
@@ -221,7 +221,7 @@ export default function NavbarActionButtonPreview() {
               <h2 className=" text-md">{user.displayName}</h2>
               <h2 className=" text-md">{user.email}</h2>
               <a
-                className="text-white   bg-indigo-700 hover:bg-indigo-800 focus:ring-4 focus:ring-blue-500 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
+                className="text-white   bg-gray-800  hover:bg-gray-800 focus:ring-4 focus:ring-blue-500 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
                 onClick={handleLogOut}
                 href=""
               >
@@ -231,7 +231,7 @@ export default function NavbarActionButtonPreview() {
           </>
         ) : (
           <div className="ml-auto hidden lg:flex items-center px-6 lg:ml-0 lg:p-0">
-              <Link to="/login" className="inline-flex h-10 items-center justify-center gap-2 whitespace-nowrap rounded bg-blue-500 px-5 text-sm font-medium tracking-wide text-white shadow-md shadow-emerald-200 transition duration-300 hover:bg-blue-600 hover:shadow-sm hover:shadow-emerald-200 focus:bg-blue-700 focus:shadow-sm focus:shadow-emerald-200 focus-visible:outline-none disabled:cursor-not-allowed disabled:border-blue-300 disabled:bg-emerald-300 disabled:shadow-none">
+              <Link to="/login" className="inline-flex h-10 items-center justify-center gap-2 whitespace-nowrap rounded bg-gray-800  px-5 text-sm font-medium tracking-wide text-white shadow-md shadow-emerald-200 transition duration-300 hover:bg-gray-600 hover:shadow-sm hover:shadow-emerald-200 focus:bg-gray-700 focus:shadow-sm focus:shadow-emerald-200 focus-visible:outline-none disabled:cursor-not-allowed disabled:border-blue-300 disabled:bg-emerald-300 disabled:shadow-none">
                 <span>Sign In</span>
               </Link>
             </div>

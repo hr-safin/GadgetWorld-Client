@@ -34,7 +34,7 @@ const Footer = () => {
             </label> 
             <div className="relative">
               <input type="text" placeholder="username@site.com" className="input input-bordered w-full pr-16" /> 
-              <button className="btn bg-blue-700 hover:text-[#16273e] text-white absolute top-0 right-0 rounded-l-none">Subscribe</button>
+              <button className="btn bg-gray-800 hover:text-[#16273e] text-white absolute top-0 right-0 rounded-l-none">Subscribe</button>
             </div>
           </fieldset>
         </form>
