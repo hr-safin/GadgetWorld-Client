@@ -11,6 +11,9 @@ import UpArraow from "../UpArraow2";
 import UpArrow from "../Update/UpArrow";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
+import TopProduct from "../TopProduct/TopProduct";
+import NewArival from "../NewArival/NewArival";
+
 
 
 export default function Home() {
@@ -48,8 +51,9 @@ export default function Home() {
 
       <Banner />
 
-      <Banner2 />
+      <TopProduct />
       <Brand />
+      <NewArival />
 
       {/* <Banner3 /> */}
       <Banner4 />

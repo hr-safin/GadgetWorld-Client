@@ -1,0 +1,32 @@
+[
+    {
+      "name": "I Phone 15 Pro Max",
+      "image": "https://static.gadgetandgear.com/image/250x250/fit/tmp/product/20230919_1695118590_281676.jpeg",
+      "price": 1200
+    },
+    {
+      "name": "I Phone 15 Pro",
+      "image": "https://static.gadgetandgear.com/image/250x250/fit/tmp/product/20231026_1698290909_643064.jpeg",
+      "price": 1100
+    },
+    {
+      "name": "Samsung Galaxy 23 Ultra",
+      "image": "https://static.gadgetandgear.com/image/250x250/fit/tmp/product/20230211_1676091365_281903.jpeg",
+      "price": 1000
+    },
+    {
+      "name": "Xiomi 12 Pro",
+      "image": "https://static.gadgetandgear.com/image/250x250/fit/tmp/product/20220425_1650874889_699968.png",
+      "price": 700
+    },
+    {
+      "name": "One Plus 10T 5G",
+      "image": "https://static.gadgetandgear.com/image/250x250/fit/tmp/product/20230507_1683442851_459685.jpeg",
+      "price": 600
+    },
+    {
+      "name": "Honor 90 5G",
+      "image": "https://static.gadgetandgear.com/image/250x250/fit/tmp/product/20231021_1697861894_407342.jpeg",
+      "price": 350
+    }
+  ]
