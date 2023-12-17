@@ -4,6 +4,7 @@ import { AuthProvider } from "../AuthContext/AuthContext";
 import useAxiosPublic from "../../Hook/useAxiosPublic";
 import useQuery from "../../Hook/useQueryHook";
 import useQueryHook from "../../Hook/useQueryHook";
+import useCart from "../../Hook/useCart";
 
 
 
@@ -15,9 +16,9 @@ export default function NavbarActionButtonPreview() {
   const [nav, setNav] = useState(false)
 
 
-  const [cart, ]  = useQueryHook()
+  const [carts]  = useCart()
 
-  console.log(cart)
+  
 
   
 
@@ -191,7 +192,7 @@ export default function NavbarActionButtonPreview() {
         <div className="indicator">
         
           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 lg:mr-0 mr-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
-          <span className="badge badge-sm indicator-item text-gray-800 font-medium">{cart.length}</span>
+          <span className="badge badge-sm indicator-item text-gray-800 font-medium">{carts.length}</span>
         </div>
       </label>
       </Link>
@@ -228,16 +229,16 @@ export default function NavbarActionButtonPreview() {
             <div
               className={
                 show
-                  ? " rounded-md flex flex-col gap-4 items-center justify-center bg-slate-300 h-40 w-60 absolute right-28 top-24"
+                  ? " rounded-md flex transition-all duration-700 flex-col justify-start items-center gap-4  bg-gray-100  p-5 absolute right-6 top-20"
                   : "hidden"
               }
             >
               <h2 className=" text-md">{user.displayName}</h2>
               <h2 className=" text-md">{user.email}</h2>
               <a
-                className="text-white   bg-gray-800  hover:bg-gray-800 focus:ring-4 focus:ring-blue-500 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
+                className="text-white cursor-pointer   bg-gray-800  hover:bg-gray-800 focus:ring-4 focus:ring-blue-500 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
                 onClick={handleLogOut}
-                href=""
+               
               >
                 Sign Out
               </a>

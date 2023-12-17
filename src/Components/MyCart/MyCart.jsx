@@ -5,62 +5,74 @@ import Swal from 'sweetalert2/dist/sweetalert2.js'
 
 import 'sweetalert2/src/sweetalert2.scss'
 import { AuthProvider } from '../AuthContext/AuthContext';
+import { FaTrash } from 'react-icons/fa6';
+import useAxiosPublic from '../../Hook/useAxiosPublic';
+import useCart from '../../Hook/useCart';
+
 
 const MyCart = () => {
     window.scrollTo(0,0)
 
     
 
-    const {user} = useContext(AuthProvider)
+    const { isLoading} = useContext(AuthProvider)
+    const axiosPublic = useAxiosPublic()
      
 
     // const [cart, setCart] = useState([])
-    const cart = useLoaderData()
-    console.log(cart)
-    const matchedEmail = cart.filter(item => item.email === user.email)
-    console.log(matchedEmail)
-    const [deleteOne, setDelete] = useState(matchedEmail)
+    // const cart1 = useLoaderData()
+    // console.log(cart1)
+    // const matchedEmail = cart1.filter(item => item.email === user.email)
+    // console.log(matchedEmail)
+    // const [deleteOne, setDelete] = useState(matchedEmail)
  
+    const [carts, refetch] = useCart()
 
+    console.log(carts)
     
 
 
 
-    
 
-    // useEffect(() => {
-    //     fetch("https://server-brand-shop-aqy2ii6z0-safin-rahmans-projects.vercel.app/myCart")
-    //     .then(res =>res.json())
-    //     .then(data => {
-    //         // console.log(data)
-    //         setCart(data)
-    //     })
-    // }, [])
     const handleDelete = (id) => {
-        fetch(`https://server-brand-shop-aqy2ii6z0-safin-rahmans-projects.vercel.app/myCart/${id}`, {
-            method : "DELETE"
-        })
-        .then(res => res.json())
-        .then(data => {
-            console.log(data)
-                  const deleted = deleteOne.filter(item => item._id !== id)
-                 setDelete(deleted)
-            
-            
-            // console.log(data)
-            console.log(data)
-        })
+
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+
+                axiosPublic.delete(`/myCart/${id}`)
+                    .then(res => {
+                        if (res.data.deletedCount > 0) {
+                            refetch()
+                            Swal.fire({
+                                title: "Deleted!",
+                                text: "Your file has been deleted.",
+                                icon: "success"
+                            });
+                        }
+                    })
+            }
+        });
     }
     // console.log(cart)
     // console.log(deleteOne)
 
     
-    return (
+    return isLoading ? <div className=' flex justify-center items-center h-[50vh]'>
+        <span className="loading loading-spinner loading-lg"></span>
+    </div> : (
         <>
 
         
         <h2 className=' text-3xl pt-10 text-center'>My Shopping Cart</h2>
-        {deleteOne.length > 0  ? 
+        {carts.length > 0  ? 
         <div className=' pb-40  px-6 lg:px-28  pb-28 pt-12'>
         <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
     <table class="w-full text-sm text-left rtl:text-right text-gray-600 ">
@@ -88,7 +100,7 @@ const MyCart = () => {
             </tr>
         </thead>
         <tbody>
-            {deleteOne.map(data => <> <tr class="bg-white border-b ">
+            {carts.map(data => <> <tr class="bg-white border-b ">
                 <td class="p-4">
                     <img src={data.photo} class="w-8 md:w-20 max-w-full max-h-full" alt="Apple Watch"/>
                 </td>
@@ -111,8 +123,8 @@ const MyCart = () => {
                 <td>
                     <button>pay now</button>
                 </td>
-                <td class="px-6 py-4">
-                    <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline">Remove</a>
+                <td class="px-10 py-4">
+                    <button onClick={() => handleDelete(data._id)} class="font-medium text-red-600 dark:text-red-500 hover:underline"><FaTrash /></button>
                 </td>
             </tr>
             </>)}

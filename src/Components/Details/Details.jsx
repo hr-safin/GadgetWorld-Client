@@ -5,13 +5,14 @@ import { Rating } from "@material-tailwind/react";
 import 'sweetalert2/src/sweetalert2.scss'
 import { AuthProvider } from "../AuthContext/AuthContext";
 import useQueryHook from "../../Hook/useQueryHook";
+import useCart from "../../Hook/useCart";
 
 const Details = () => {
     window.scrollTo(0,0)
   const data = useLoaderData();
   const {user} = useContext(AuthProvider)
   console.log(user.email)
-  const [cart, refetch] = useQueryHook()
+  const [carts, refetch] = useCart()
   const handleCart = () => {
     const name = data.name
     const photo = data.photo
