@@ -44,7 +44,7 @@ const MyCart = () => {
         .then(data => {
             console.log(data)
                   const deleted = deleteOne.filter(item => item._id !== id)
-                 setDelete(deleted)
+                 setDelete(data)
             
             
             // console.log(data)
@@ -61,8 +61,60 @@ const MyCart = () => {
         
         <h2 className=' text-3xl pt-10 text-center'>My Shopping Cart</h2>
         {deleteOne.length > 0  ? 
-        <div className=' grid-cols-1 grid gap-8 place-items-center px-6  pb-28 pt-12'>
-        {deleteOne.map(data => <CartCard handleDelete={handleDelete}  data={data} key={data._id} />)}
+        <div className=' h-[60vh]  px-6  pb-28 pt-12'>
+        {deleteOne.map(data => <div className="overflow-x-auto">
+  <table className="table">
+    {/* head */}
+    <thead>
+      <tr>
+        <th>
+          <label>
+            <input type="checkbox" className="checkbox" />
+          </label>
+        </th>
+        <th>Name</th>
+        <th>Job</th>
+        <th>Favorite Color</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {/* row 1 */}
+      <tr>
+        <th>
+          <label>
+            <input type="checkbox" className="checkbox" />
+          </label>
+        </th>
+        <td>
+          <div className="flex items-center gap-3">
+            <div className="avatar">
+              <div className="mask mask-squircle w-12 h-12">
+                <img src="/tailwind-css-component-profile-2@56w.png" alt="Avatar Tailwind CSS Component" />
+              </div>
+            </div>
+            <div>
+              <div className="font-bold">Hart Hagerty</div>
+              <div className="text-sm opacity-50">United States</div>
+            </div>
+          </div>
+        </td>
+        <td>
+          Zemlak, Daniel and Leannon
+          <br/>
+          <span className="badge badge-ghost badge-sm">Desktop Support Technician</span>
+        </td>
+        <td>Purple</td>
+        <th>
+          <button className="btn btn-ghost btn-xs">details</button>
+        </th>
+      </tr>
+      
+    </tbody>
+    
+    
+  </table>
+</div>)}
     </div>
         :
 
