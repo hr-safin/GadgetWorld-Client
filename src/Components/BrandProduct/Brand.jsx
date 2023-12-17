@@ -33,10 +33,10 @@ const Brand = () => {
     </div> : (
         <div>
             {getData.length > 0 ? <>
-                <div className=' w-full h-[100vh] lg:mb-36 px-6 pt-6 lg:px-20 rounded-lg lg:py-10' >
+                <div className=' w-full h-[100vh] lg:mb-36 px-6 pt-2 lg:px-24 rounded-lg lg:py-10' >
              <AddBrand getData={getData} />
             </div>
-            <div className=" -mt-64 lg:mt-0 lg:place-items-center px-6  lg:px-20 pb-36 grid grid-cols-1 lg:grid-cols-2 gap-10">
+            <div className=" -mt-64 lg:mt-0 lg:place-items-center px-6  lg:px-20 pb-36 grid grid-cols-1 lg:grid-cols-3 gap-10">
         {getData.map(data => <CardBrand key={data._id} data={data} />)}
       </div>
             

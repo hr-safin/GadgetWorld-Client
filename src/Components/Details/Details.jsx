@@ -4,13 +4,14 @@ import Swal from 'sweetalert2/dist/sweetalert2.js'
 import { Rating } from "@material-tailwind/react";
 import 'sweetalert2/src/sweetalert2.scss'
 import { AuthProvider } from "../AuthContext/AuthContext";
+import useQueryHook from "../../Hook/useQueryHook";
 
 const Details = () => {
     window.scrollTo(0,0)
   const data = useLoaderData();
   const {user} = useContext(AuthProvider)
   console.log(user.email)
-
+  const [cart, refetch] = useQueryHook()
   const handleCart = () => {
     const name = data.name
     const photo = data.photo
@@ -33,6 +34,7 @@ const Details = () => {
     .then(res => res.json())
     .then(data => {
         if(data.insertedId){
+          refetch()
             Swal.fire(
                 'Good job!',
                 'This product has been added to cart',
@@ -62,7 +64,7 @@ const Details = () => {
         {/* <span class="bg-blue-200 text-blue-800 text-base font-semibold  px-8 py-2 flex justify-start flex-row w-[200px] rounded  dark:text-blue-800 mt-1 mb-5 ">Rating : {}.0 / 10.0</span> */}
         <h2 className="card-title">Price : {data.price} BDT</h2>
         <div className="card-actions justify-end">
-          <button onClick={handleCart} className="btn bg-blue-600 text-white hover:text-black">Add To Cart</button>
+          <button onClick={handleCart} className="btn bg-gray-800 text-white hover:text-black">Add To Cart</button>
         </div>
       </div>
     </div>

@@ -26,7 +26,7 @@ const AddBrand = ({getData}) => {
       >
         {getData.slice(0,3).map((slide) => (
           <SwiperSlide className="" key={slide._id}>
-            <img className=" rounded-lg  h-[260px] lg:h-[700px] bg-center w-full" src={slide.banner} alt={slide._id}/>
+            <img className=" rounded-lg  h-[260px] lg:h-[560px] bg-center w-full" src={slide.banner} alt={slide._id}/>
           </SwiperSlide>
         ))}
       </Swiper>

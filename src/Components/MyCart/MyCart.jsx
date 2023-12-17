@@ -44,7 +44,7 @@ const MyCart = () => {
         .then(data => {
             console.log(data)
                   const deleted = deleteOne.filter(item => item._id !== id)
-                 setDelete(data)
+                 setDelete(deleted)
             
             
             // console.log(data)
@@ -61,60 +61,66 @@ const MyCart = () => {
         
         <h2 className=' text-3xl pt-10 text-center'>My Shopping Cart</h2>
         {deleteOne.length > 0  ? 
-        <div className=' h-[60vh]  px-6  pb-28 pt-12'>
-        {deleteOne.map(data => <div className="overflow-x-auto">
-  <table className="table">
-    {/* head */}
-    <thead>
-      <tr>
-        <th>
-          <label>
-            <input type="checkbox" className="checkbox" />
-          </label>
-        </th>
-        <th>Name</th>
-        <th>Job</th>
-        <th>Favorite Color</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      {/* row 1 */}
-      <tr>
-        <th>
-          <label>
-            <input type="checkbox" className="checkbox" />
-          </label>
-        </th>
-        <td>
-          <div className="flex items-center gap-3">
-            <div className="avatar">
-              <div className="mask mask-squircle w-12 h-12">
-                <img src="/tailwind-css-component-profile-2@56w.png" alt="Avatar Tailwind CSS Component" />
-              </div>
-            </div>
-            <div>
-              <div className="font-bold">Hart Hagerty</div>
-              <div className="text-sm opacity-50">United States</div>
-            </div>
-          </div>
-        </td>
-        <td>
-          Zemlak, Daniel and Leannon
-          <br/>
-          <span className="badge badge-ghost badge-sm">Desktop Support Technician</span>
-        </td>
-        <td>Purple</td>
-        <th>
-          <button className="btn btn-ghost btn-xs">details</button>
-        </th>
-      </tr>
-      
-    </tbody>
-    
-    
-  </table>
-</div>)}
+        <div className=' pb-40  px-6 lg:px-28  pb-28 pt-12'>
+        <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+    <table class="w-full text-sm text-left rtl:text-right text-gray-600 ">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50  ">
+            <tr>
+                <th scope="col" class="px-6 py-3">
+                    Product Image
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Product Name
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Quantity
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Price
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Pay
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Action
+                </th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            {deleteOne.map(data => <> <tr class="bg-white border-b ">
+                <td class="p-4">
+                    <img src={data.photo} class="w-8 md:w-20 max-w-full max-h-full" alt="Apple Watch"/>
+                </td>
+                <td>
+                    <h2 className=' text-black'>{data.name}</h2>
+                </td>
+                
+                <td class="px-6 py-4">
+                    <div class="flex items-center">
+                        
+                        <div>
+                            <input type="number" id="first_product" class="bg-gray-50 w-14 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block px-2.5 py-1 " placeholder="1" required />
+                        </div>
+                       
+                    </div>
+                </td>
+                <td class="px-6 py-4 font-semibold text-gray-900 ">
+                    {data.price} BDT
+                </td>
+                <td>
+                    <button>pay now</button>
+                </td>
+                <td class="px-6 py-4">
+                    <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline">Remove</a>
+                </td>
+            </tr>
+            </>)}
+            
+            
+        </tbody>
+    </table>
+</div>
     </div>
         :
 

@@ -16,7 +16,13 @@ import Update from "./Components/Update/Update";
 import Details from "./Components/Details/Details";
 import { useEffect, useState } from "react";
 import ClipLoader from "react-spinners/ClipLoader";
+import {
+  QueryClient,
+  QueryClientProvider,
+  useQuery,
+} from '@tanstack/react-query'
 
+const queryClient = new QueryClient()
 function App() {
 
   const [loading, setLoading] = useState(false)
@@ -77,11 +83,15 @@ function App() {
   return loading ? <div className=" text-blue-600 text-3xl bg-gray-900 h-screen flex justify-center items-center">
      <span className="loading loading-dots loading-lg"></span>
   </div> : (
-    <AuthContext>
+    <QueryClientProvider client={queryClient}>
+      <AuthContext>
     <RouterProvider router={router}></RouterProvider>
       
     </AuthContext>
+    </QueryClientProvider>
   )
+    
+    
 }
 
 export default App
