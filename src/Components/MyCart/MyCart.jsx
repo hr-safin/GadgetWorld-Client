@@ -71,9 +71,23 @@ const MyCart = () => {
         <>
 
         
-        <h2 className=' text-3xl pt-10 text-center'>My Shopping Cart</h2>
+        <h2 className=' text-3xl pt-6 text-center'>My Shopping Cart</h2>
         {carts.length > 0  ? 
-        <div className=' pb-40  px-6 lg:px-28  pb-28 pt-12'>
+        <div className=' pb-40 flex flex-col-reverse rounded-md lg:flex-row-reverse  px-6 justify-center    pt-12 gap-10 lg:gap-32'>
+            <div className='bg-gray-50 h-[295px] mx-auto lg:mx-0 w-full lg:w-80 p-5 '>
+                <div>
+                    <h2 className=' text-2xl font-semibold pb-4'>Order Summary</h2>
+                    <h2>Sub Total : BDT </h2>
+                    <div className=' border-b border-gray-300 my-4'></div>
+                    <h2>Delivery Charge : 100 BDT </h2>
+                    <div className=' border-b border-gray-300 my-4'></div>
+                    <h2 className=' font-semibold text-lg'>Total  : BDT </h2>
+                    <div className=' border-b border-gray-300 my-4'></div>
+                    <div>
+                        <button className=' bg-gray-800 w-full rounded-md py-2 text-white hover:bg-gray-900 mb-2'>Checkout</button>
+                    </div>
+                </div>
+            </div>
         <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
     <table class="w-full text-sm text-left rtl:text-right text-gray-600 ">
         <thead class="text-xs text-gray-700 uppercase bg-gray-50  ">
@@ -91,9 +105,6 @@ const MyCart = () => {
                     Price
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    Pay
-                </th>
-                <th scope="col" class="px-6 py-3">
                     Action
                 </th>
                 
@@ -102,7 +113,7 @@ const MyCart = () => {
         <tbody>
             {carts.map(data => <> <tr class="bg-white border-b ">
                 <td class="p-4">
-                    <img src={data.photo} class="w-8 md:w-20 max-w-full max-h-full" alt="Apple Watch"/>
+                    <img src={data.photo} class="w-8 md:w-16 max-w-full max-h-full" alt="Apple Watch"/>
                 </td>
                 <td>
                     <h2 className=' text-black'>{data.name}</h2>
@@ -119,9 +130,6 @@ const MyCart = () => {
                 </td>
                 <td class="px-6 py-4 font-semibold text-gray-900 ">
                     {data.price} BDT
-                </td>
-                <td>
-                    <button>pay now</button>
                 </td>
                 <td class="px-10 py-4">
                     <button onClick={() => handleDelete(data._id)} class="font-medium text-red-600 dark:text-red-500 hover:underline"><FaTrash /></button>
