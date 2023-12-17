@@ -68,11 +68,11 @@ export default function NavbarActionButtonPreview() {
 
               <div className=" flex items-center gap-2">
                 <img
-                  className=" w-10 rounded-2xl"
+                  className=" w-8 md:w-10 rounded-2xl"
                   src="https://play-lh.googleusercontent.com/elVl_dXmZaqDnJq09HK4rrTtbMyhTPZdK22LNILrkigsjyA-YScs9LYkE4W7vMxq8rtx"
                   alt=""
                 />
-                <h2 className=" text-2xl text-gray-800 font-bold">
+                <h2 className=" text-xl lg:text-2xl text-gray-800 font-bold">
                   Gadget World
                 </h2>
               </div>
@@ -189,7 +189,7 @@ export default function NavbarActionButtonPreview() {
 
               <div
                 onClick={() => setIsToggleOpen(!true)}
-                className="flex  lg:flex-row lg:items-center flex-col gap-3  lg:pr-4 pr-20"
+                className="hidden  lg:flex-row lg:items-center flex-col gap-3  lg:pr-4 pr-20"
               >
                 <Link to="/myCart">
                   <label tabIndex={0} className="btn btn-ghost btn-circle">
@@ -232,7 +232,7 @@ export default function NavbarActionButtonPreview() {
               </div>
             </ul>
 
-            <div className=" gap-2 items-center pl-[68px]  lg:pl-0 sm:pl-60 justify-center flex lg:flex">
+            <div className=" gap-2 items-center pl-[80px] pt-1  lg:pl-0 sm:pl-60 justify-center flex lg:flex">
               <div
                 onClick={() => setIsToggleOpen(!true)}
                 className="flex  lg:hidden lg:items-center flex-col   lg:pr-4 "
