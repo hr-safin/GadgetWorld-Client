@@ -1,0 +1,147 @@
+[
+    {
+      "name": "IPhone XS",
+      "photo": "https://gngbd.com/assets/images/product/featured/63a2e6b03c1341671620272.png",
+      "price": 32500,
+      "brand": "Apple"
+    },
+    {
+      "name": "IPhone 12 Pro Max",
+      "photo": "https://gngbd.com/assets/images/product/featured/63a93081766ea1672032385.png",
+      "price": 60000,
+      "brand": "Apple"
+    },
+    {
+      "name": "IPhone 13 Pro Max",
+      "photo": "https://gngbd.com/assets/images/product/featured/63a93182a03f91672032642.png",
+      "price": 90000,
+      "brand": "Apple"
+    },
+    {
+      "name": "IPhone 13 Pro",
+      "photo": "https://gngbd.com/assets/images/product/featured/63a934e5a9d5f1672033509.png",
+      "price": 85000,
+      "brand": "Apple"
+    },
+    {
+      "name": "IPhone 14 Pro Max",
+      "photo": "https://gngbd.com/assets/images/product/featured/63a93847cc3001672034375.png",
+      "price": 110000,
+      "brand": "Apple"
+    },
+    {
+      "name": "IPhone 12 ",
+      "photo": "https://gngbd.com/assets/images/product/featured/63ad4dc02a3cc1672302016.png",
+      "price": 55000,
+      "brand": "Apple"
+    },
+    {
+      "name": "Galaxy A03",
+      "photo": "https://gngbd.com/assets/images/product/featured/6398608834bbd1670930568.png",
+      "price": 10000,
+      "brand": "Samsung"
+    },
+    {
+      "name": "Galaxy S10+",
+      "photo": "https://gngbd.com/assets/images/product/featured/63a2cf10c0beb1671614224.png",
+      "price": 25000,
+      "brand": "Samsung "
+    },
+    {
+      "name": "Galaxy S20",
+      "photo": "https://gngbd.com/assets/images/product/featured/63a2d0aacda7f1671614634.png",
+      "price": 20000,
+      "brand": "Samsung"
+    },
+    {
+      "name": "Galaxy S23 Ultra",
+      "photo": "https://gngbd.com/assets/images/product/featured/64229d03443751679990019.png",
+      "price": 100000,
+      "brand": "Samsung"
+    },
+    {
+      "name": "Galaxy Note 20",
+      "photo": "https://gngbd.com/assets/images/product/featured/64575980c6cab1683446144.png",
+      "price": 31000,
+      "brand": "Samsung"
+    },
+    {
+      "name": "Galaxy Note 10",
+      "photo": "https://gngbd.com/assets/images/product/featured/64575d903d54e1683447184.png",
+      "price": 129.99,
+      "brand": "Samsung"
+    },
+    {
+      "name": "OnePlus Nord",
+      "photo": "https://gngbd.com/assets/images/product/featured/63a04e6f2745d1671450223.png",
+      "price": 18000,
+      "brand": "OnePlus"
+    },
+    {
+      "name": "One Plus 6T",
+      "photo": "https://gngbd.com/assets/images/product/featured/63a2f24af0ae51671623242.png",
+      "price": 23000,
+      "brand": "OnePlus"
+    },
+    {
+      "name": "One Plus 8 5G",
+      "photo": "https://gngbd.com/assets/images/product/featured/63a2fa7d60de61671625341.png",
+      "price": 40000,
+      "brand": "OnePlus"
+    },
+    {
+      "name": "One Plus Nord N100",
+      "photo": "https://gngbd.com/assets/images/product/featured/63a2fbf38fd111671625715.png",
+      "price": 12000,
+      "brand": "OnePlus"
+    },
+    {
+      "name": "One Plus 9 5G",
+      "photo": "https://gngbd.com/assets/images/product/featured/63afddfd1bf191672470013.png",
+      "price": 70000,
+      "brand": "OnePlus"
+    },
+    {
+      "name": "One Plus 7T Pro",
+      "photo": "https://gngbd.com/assets/images/product/featured/63afe1097d8ce1672470793.png",
+      "price": 43000,
+      "brand": "OnePlus"
+    },
+    {
+      "name": "GT Master Edition",
+      "photo": "https://gngbd.com/assets/images/product/featured/63b00fe0afe7f1672482784.png",
+      "price": 42000,
+      "brand": "RealMe"
+    },
+    {
+      "name": "Narzo 50",
+      "photo": "https://gngbd.com/assets/images/product/featured/63b0121966d921672483353.png",
+      "price": 23000,
+      "brand": "RealMe"
+    },
+    {
+      "name": "RealMe 9",
+      "photo": "https://gngbd.com/assets/images/product/featured/63b014f207dad1672484082.png",
+      "price": 27000,
+      "brand": "RealMe"
+    },
+    {
+      "name": "RealMe 9 Pro" ,
+      "photo": "https://gngbd.com/assets/images/product/featured/63b0178214a071672484738.png",
+      "price": 29000,
+      "brand": "RealMe"
+    },
+    {
+      "name": "RealMe 9i",
+      "photo": "https://gngbd.com/assets/images/product/featured/63b01f35b6e101672486709.png",
+      "price": 21000,
+      "brand": "RealMe"
+    },
+    {
+      "name": "RealMe 9 Speed Edition",
+      "photo": "https://gngbd.com/assets/images/product/featured/63b01af7981bc1672485623.png",
+      "price": 30000,
+      "brand": "RealMe"
+    }
+  ]
+  

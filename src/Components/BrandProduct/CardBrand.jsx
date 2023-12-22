@@ -1,10 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Rating } from "@material-tailwind/react";
 const CardBrand = ({data}) => {
     window.scrollTo(0,0)
 
-    const number = parseInt(data.rating) 
+   
     return (
         
 <div class="w-full max-w-sm  h-[380px]  border border-gray-200 rounded-lg shadow  ">

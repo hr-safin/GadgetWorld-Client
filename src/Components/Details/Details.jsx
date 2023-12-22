@@ -60,8 +60,7 @@ const Details = () => {
         <h2 className="card-title text-gray-600">{data.name}, {data.type}</h2>
         
         <p className=" lg:w-[500px]  text-gray-600 pt-2">{data.description}</p>
-        <Rating className=" text-yellow-500 mt-1 mb-3" value={number} />
-        {/* <span class="bg-blue-200 text-blue-800 text-base font-semibold  px-8 py-2 flex justify-start flex-row w-[200px] rounded  dark:text-blue-800 mt-1 mb-5 ">Rating : {}.0 / 10.0</span> */}
+     
         <h2 className="card-title">Price : {data.price} BDT</h2>
         <div className="card-actions justify-end">
           <button onClick={handleCart} className="btn bg-gray-800 text-white hover:text-black">Add To Cart</button>
