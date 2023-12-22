@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import Swal from 'sweetalert2/dist/sweetalert2.js'
-import { Rating } from "@material-tailwind/react";
 import 'sweetalert2/src/sweetalert2.scss'
 import { AuthProvider } from "../AuthContext/AuthContext";
 import useQueryHook from "../../Hook/useQueryHook";

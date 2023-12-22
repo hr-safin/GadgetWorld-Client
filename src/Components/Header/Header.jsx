@@ -147,13 +147,13 @@ export default function NavbarActionButtonPreview() {
                 className="flex items-stretch"
               >
                 <NavLink
-                  to="/product"
+                  to="/brand"
                   className="flex text-base items-center gap-2 py-4 transition-colors duration-300  text-gray-700 hover:text-gray-500 focus:text-gray-600 focus:outline-none focus-visible:outline-none lg:px-4  cursor-pointer"
                 >
                   <span>Brand</span>
                 </NavLink>
               </li>
-              <li
+              {/* <li
                 onClick={() => setIsToggleOpen(!true)}
                 className="flex items-stretch"
               >
@@ -163,7 +163,7 @@ export default function NavbarActionButtonPreview() {
                 >
                   <span>Blog</span>
                 </NavLink>
-              </li>
+              </li> */}
               <li
                 onClick={() => setIsToggleOpen(!true)}
                 className="flex items-stretch"

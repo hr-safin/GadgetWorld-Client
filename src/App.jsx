@@ -21,6 +21,7 @@ import {
   QueryClientProvider,
   useQuery,
 } from '@tanstack/react-query'
+import AllBrand from "./Components/AllBrand/AllBrand";
 
 const queryClient = new QueryClient()
 function App() {
@@ -51,6 +52,10 @@ function App() {
         {
           path : "/register",
           element : <Registration /> 
+        },
+        {
+           path : "/brand",
+           element : <AllBrand />
         },
         {
           path : "/addProduct",

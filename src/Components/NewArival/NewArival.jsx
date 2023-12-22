@@ -3,6 +3,7 @@ import useAxiosPublic from '../../Hook/useAxiosPublic';
 
 import { FaArrowRightLong } from "react-icons/fa6";
 import NewSingle from './NewSingle';
+import { Link } from 'react-router-dom';
 const NewArival = () => {
     const axiosPublic = useAxiosPublic()
 
@@ -29,12 +30,12 @@ const NewArival = () => {
             </div>
 
 
-            <div className=' pt-6 pb-20 flex items-center justify-center'>
+            <Link to="/brand" className=' pt-6 pb-20 flex items-center justify-center'>
                 <button className=' hover:bg-gray-800 rounded-md flex items-center gap-2 bg-gray-900 text-white px-4 py-2'>
                     View All
                     <FaArrowRightLong />
                     </button>
-            </div>
+            </Link>
             
         </div>
     );

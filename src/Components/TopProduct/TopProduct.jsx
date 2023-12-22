@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import useAxiosPublic from '../../Hook/useAxiosPublic';
 import SingleTop from './SingleTop';
 import { FaArrowRightLong } from "react-icons/fa6";
+import { Link } from 'react-router-dom';
 const TopProduct = () => {
     const axiosPublic = useAxiosPublic()
 
@@ -28,12 +29,12 @@ const TopProduct = () => {
             </div>
 
 
-            <div className=' py-6 flex items-center justify-center'>
+            <Link to="/brand" className=' py-6 flex items-center justify-center'>
                 <button className=' hover:bg-gray-800 rounded-md flex items-center gap-2 bg-gray-900 text-white px-4 py-2'>
                     View All
                     <FaArrowRightLong />
                     </button>
-            </div>
+            </Link>
             
         </div>
     );
