@@ -77,7 +77,7 @@ const MyCart = () => {
         
         <h2 className=' text-3xl pt-6 text-center'>My Shopping Cart</h2>
         {carts.length > 0  ? 
-        <div className=' pb-40 flex flex-col-reverse rounded-md lg:flex-row-reverse  px-6 justify-center    pt-12 gap-10 lg:gap-32'>
+        <div className=' pb-40 flex flex-col-reverse rounded-md lg:flex-row-reverse   justify-center lg:px-28 px-4   pt-12 gap-10 lg:gap-32'>
             <div className='bg-gray-50 shadow-lg h-[295px] mx-auto lg:mx-0 w-full lg:w-80 p-5 '>
                 <div>
                     <h2 className=' text-2xl font-semibold pb-4'>Order Summary</h2>
@@ -92,7 +92,7 @@ const MyCart = () => {
                     </div>
                 </div>
             </div>
-        <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+        <div class="relative w-[60%] overflow-x-auto shadow-md sm:rounded-lg">
     <table class="w-full text-sm text-left rtl:text-right text-gray-600 ">
         <thead class="text-xs text-gray-700 uppercase bg-gray-50  ">
             <tr>
@@ -102,9 +102,9 @@ const MyCart = () => {
                 <th scope="col" class="px-6 py-3">
                     Product Name
                 </th>
-                <th scope="col" class="px-6 py-3">
+                {/* <th scope="col" class="px-6 py-3">
                     Quantity
-                </th>
+                </th> */}
                 <th scope="col" class="px-6 py-3">
                     Price
                 </th>
@@ -123,7 +123,7 @@ const MyCart = () => {
                     <h2 className=' text-black'>{data.name}</h2>
                 </td>
                 
-                <td class="px-6 py-4">
+                {/* <td class="px-6 py-4">
                     <div class="flex items-center">
                         
                         <div>
@@ -131,7 +131,7 @@ const MyCart = () => {
                         </div>
                        
                     </div>
-                </td>
+                </td> */}
                 <td class="px-6 py-4 font-semibold text-gray-900 ">
                     {data.price} BDT
                 </td>

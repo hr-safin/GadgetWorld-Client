@@ -39,7 +39,7 @@ const OnePlus = ({item}) => {
         }
     }
     return (
-        <div class="w-[300px]   bg-white border border-gray-200 rounded-lg shadow ">
+        <div class="w-[280px]   bg-white border border-gray-200 rounded-lg shadow ">
    
         <img class="p-8 w-72  mx-auto rounded-t-lg" src={item.photo} alt="product image" />
    
