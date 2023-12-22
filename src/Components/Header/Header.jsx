@@ -175,21 +175,9 @@ export default function NavbarActionButtonPreview() {
                   <span>Add Product</span>
                 </NavLink>
               </li>
-              {/* <li   className="flex items-stretch">
-                <NavLink
-                 onClick={() =>setIsToggleOpen(!true)}
-                 to="/myCart"
-                  
-                  className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-blue-500 focus:text-blue-600 focus:outline-none focus-visible:outline-none lg:px-8 cursor-pointer"
-                 
-                >
-                  <span>My Cart</span>
-                </NavLink>
-              </li> */}
-
               <div
                 onClick={() => setIsToggleOpen(!true)}
-                className="hidden  lg:flex-row lg:items-center flex-col gap-3  lg:pr-4 pr-20"
+                className="lg:flex-row hidden lg:flex lg:items-center  gap-3  lg:pr-4 pr-20"
               >
                 <Link to="/myCart">
                   <label tabIndex={0} className="btn btn-ghost btn-circle">
@@ -214,9 +202,6 @@ export default function NavbarActionButtonPreview() {
                     </div>
                   </label>
                 </Link>
-                {/* <div className=" lg:pl-3 lg:pr-4 flex items-center">
-      <input onChange={toggle} type="checkbox"  className="toggle toggle-sm"  />
-      </div> */}
               </div>
 
               <div

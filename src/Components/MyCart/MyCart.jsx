@@ -28,7 +28,11 @@ const MyCart = () => {
  
     const [carts, refetch] = useCart()
 
-    console.log(carts)
+    const SubTotal = carts.reduce((total, item) => total + parseFloat(item.price),0)
+    
+    const deliveryCharge = 60
+
+    const grandTotal = SubTotal + deliveryCharge
     
 
 
@@ -74,14 +78,14 @@ const MyCart = () => {
         <h2 className=' text-3xl pt-6 text-center'>My Shopping Cart</h2>
         {carts.length > 0  ? 
         <div className=' pb-40 flex flex-col-reverse rounded-md lg:flex-row-reverse  px-6 justify-center    pt-12 gap-10 lg:gap-32'>
-            <div className='bg-gray-50 h-[295px] mx-auto lg:mx-0 w-full lg:w-80 p-5 '>
+            <div className='bg-gray-50 shadow-lg h-[295px] mx-auto lg:mx-0 w-full lg:w-80 p-5 '>
                 <div>
                     <h2 className=' text-2xl font-semibold pb-4'>Order Summary</h2>
-                    <h2>Sub Total : BDT </h2>
+                    <h2>Sub Total : {SubTotal}   BDT </h2>
                     <div className=' border-b border-gray-300 my-4'></div>
-                    <h2>Delivery Charge : 100 BDT </h2>
+                    <h2>Delivery Charge : {deliveryCharge} BDT </h2>
                     <div className=' border-b border-gray-300 my-4'></div>
-                    <h2 className=' font-semibold text-lg'>Total  : BDT </h2>
+                    <h2 className=' font-semibold text-lg'>Total  : {grandTotal} BDT</h2>
                     <div className=' border-b border-gray-300 my-4'></div>
                     <div>
                         <button className=' bg-gray-800 w-full rounded-md py-2 text-white hover:bg-gray-900 mb-2'>Checkout</button>
