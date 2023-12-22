@@ -22,15 +22,8 @@ const CardBrand = ({data}) => {
             <h5 class="text-xl text-center font-semibold tracking-tight text-gray-600 ">{data.name}</h5>
             <span  class="text-xl font-semibold text-gray-700 ">{data.price} BDT</span> 
             </div>
-            
-            
-            
-            {/* <p class="text-base pt-3 pb-3 font-semibold tracking-tight text-gray-500 ">{data.description}</p> */}
         </a>
-        {/* <div class="flex items-center mt-2.5 mb-2">
-           <Rating className=' text-yellow-500' value={number} />
-            {/* <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded  dark:text-blue-800 ml-3">{data.rating}.0 / 10.0</span> */}
-        {/* </div>  */}
+        
         
         <div class="flex w-full  gap-4 items-center justify-between pt-6">
             
