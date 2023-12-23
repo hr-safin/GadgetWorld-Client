@@ -62,10 +62,10 @@ const AllBrand = () => {
   return (
     <div>
       <div className=" pb-10 pt-6 flex gap-3 flex-col justify-center items-center ">
-        <h3 className=" text-4xl font-bold">Popular Brand</h3>
+        <h3 className="text-2xl te lg:text-4xl font-bold">Popular Brand</h3>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-11 pb-20 gap-10 lg:px-24 px-4">
-        <div className="bg-gray-200 px-5 py-4 mx-auto w-full rounded-md shadow-md h-[140px] col-span-3">
+        <div className="bg-gray-100 px-5 py-4 mx-auto w-full md:w-[300px] rounded-md shadow-md h-[140px] col-span-8 lg:col-span-3">
           <h2 className="text-xl pb-4 font-bold">Filter By Price</h2>
           <select
             value={selectedPrice}
@@ -81,7 +81,7 @@ const AllBrand = () => {
         <div className=" col-span-8 ">
           <div>
             <Tabs>
-              <TabList className="bg-gray-200 text-center rounded-lg text-black px-2 py-3">
+              <TabList className="bg-gray-100 text-center rounded-lg text-black px-2 py-3">
                 <Tab>All</Tab>
                 <Tab>IPhone</Tab>
                 <Tab>Samsung</Tab>

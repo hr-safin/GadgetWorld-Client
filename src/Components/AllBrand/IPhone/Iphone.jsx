@@ -39,7 +39,7 @@ const Iphone = ({item}) => {
         }
     }
     return (
-        <div class="w-[280px]   bg-white border border-gray-200 rounded-lg shadow ">
+        <div class="w-[280px] mx-auto   bg-white border border-gray-200 rounded-lg shadow ">
    
         <img class="p-8 w-60  mx-auto rounded-t-lg" src={item.photo} alt="product image" />
    
