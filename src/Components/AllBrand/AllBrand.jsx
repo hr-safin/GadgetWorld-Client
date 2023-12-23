@@ -9,28 +9,21 @@ import Realme from "./RealMe/Realme";
 import Samsung from "./Samsung/Samsung";
 import { AuthProvider } from "../AuthContext/AuthContext";
 
-const cardsPerPage = 6
+const cardsPerPage = 6;
 const AllBrand = () => {
+  window.scrollTo(0, 0);
 
-  window.scrollTo(0,0)
-
-  
   const [brand, refetch] = useBrand();
   const [selectedPrice, setSelectedPrice] = useState("all");
-  const [currentPage, setCurrentPage]  = useState(1)
-
+  const [currentPage, setCurrentPage] = useState(1);
 
   const handleSelectPrice = (e) => {
     setSelectedPrice(e.target.value);
   };
 
   const filterPrice = (brand) => {
-
-    const startIndex = (currentPage - 1 ) * cardsPerPage
-    const lastIndex = startIndex + cardsPerPage
-
-
-
+    const startIndex = (currentPage - 1) * cardsPerPage;
+    const lastIndex = startIndex + cardsPerPage;
 
     switch (selectedPrice) {
       case "low":
@@ -56,16 +49,16 @@ const AllBrand = () => {
   const samsung = brand.filter((item) => item.brand === "Samsung");
   const onePlus = brand.filter((item) => item.brand === "OnePlus");
   const realMe = brand.filter((item) => item.brand === "RealMe");
-  
-  const totalPage = Math.ceil(brand.length / cardsPerPage)
+
+  const totalPage = Math.ceil(brand.length / cardsPerPage);
 
   const handlePrevPage = () => {
-    setCurrentPage((prev) => Math.max(prev - 1), 1)
-  }
+    setCurrentPage((prev) => Math.max(prev - 1), 1);
+  };
 
   const handleNextPage = () => {
-    setCurrentPage((prev) => Math.min(prev + 1), totalPage)
-  }
+    setCurrentPage((prev) => Math.min(prev + 1), totalPage);
+  };
   return (
     <div>
       <div className=" pb-10 pt-6 flex gap-3 flex-col justify-center items-center ">
@@ -133,9 +126,23 @@ const AllBrand = () => {
               </TabPanel>
             </Tabs>
             <div className=" pt-8 flex justify-center items-center gap-4">
-              <button  className=" border px-2 py-1.5 font-bold rounded-md " disabled={currentPage ===1} onClick={handlePrevPage}>prev</button>
-              <span className=" font-medium ">{currentPage} / {totalPage}</span>
-              <button className=" border px-2 py-1.5 font-bold rounded-md " disabled={currentPage === totalPage} onClick={handleNextPage}>next</button>
+              <button
+                className=" border px-2 py-1.5 font-bold rounded-md "
+                disabled={currentPage === 1}
+                onClick={handlePrevPage}
+              >
+                prev
+              </button>
+              <span className=" font-medium ">
+                {currentPage} / {totalPage}
+              </span>
+              <button
+                className=" border px-2 py-1.5 font-bold rounded-md "
+                disabled={currentPage === totalPage}
+                onClick={handleNextPage}
+              >
+                next
+              </button>
             </div>
           </div>
         </div>
