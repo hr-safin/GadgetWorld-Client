@@ -53,7 +53,7 @@ const AllBrand = () => {
   const totalPage = Math.ceil(brand.length / cardsPerPage);
 
   const handlePrevPage = () => {
-    setCurrentPage((prev) => Math.max(prev - 1), 1);
+    setCurrentPage((prev) => Math.max(prev - 1, 1));
   };
 
   const handleNextPage = () => {
