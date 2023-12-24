@@ -7,7 +7,6 @@ import Iphone from "./IPhone/Iphone";
 import OnePlus from "./OnePlus/OnePlus";
 import Realme from "./RealMe/Realme";
 import Samsung from "./Samsung/Samsung";
-import { AuthProvider } from "../AuthContext/AuthContext";
 
 const cardsPerPage = 6;
 const AllBrand = () => {
@@ -16,20 +15,22 @@ const AllBrand = () => {
   const [brand, refetch] = useBrand();
   const [selectedPrice, setSelectedPrice] = useState("all");
   const [currentPage, setCurrentPage] = useState(1);
-  const [display, setDisplay] = useState(null)
-  const [filterSearch, setFilterSearch] = useState([])
+  const [display, setDisplay] = useState(null);
+  const [filterSearch, setFilterSearch] = useState([]);
 
   const handleSelectPrice = (e) => {
     setSelectedPrice(e.target.value);
   };
 
   const handleSearch = () => {
-    console.log(display)
-    const filterItems = brand.filter(item => item.name.toLowerCase().includes(display))
-    
-    console.log(filterItems)
-    setFilterSearch(filterItems)
-  }
+    console.log(display);
+    const filterItems = brand.filter((item) =>
+      item.name.toLowerCase().includes(display)
+    );
+
+    console.log(filterItems);
+    setFilterSearch(filterItems);
+  };
 
   const filterPrice = (brand) => {
     const startIndex = (currentPage - 1) * cardsPerPage;
@@ -78,10 +79,17 @@ const AllBrand = () => {
         <div className="bg-gray-100 px-4 py-4 mx-auto w-full md:w-[330px] rounded-md shadow-md h-[240px] col-span-8 lg:col-span-3">
           <div className=" flex gap-2 items-center pb-6 pt-5">
             <input
-            
-            onChange={(e) => setDisplay(e.target.value)}
-            className=" w-[400px] md:w-[72%] border border-gray-900 rounded-md px-3 p-2" type="search" placeholder="Search your product" />
-            <button onClick={handleSearch} className=" px-4 py-2 bg-gray-900 text-white rounded-md ">Search</button>
+              onChange={(e) => setDisplay(e.target.value)}
+              className=" w-[400px] md:w-[72%] border border-gray-900 rounded-md px-3 p-2"
+              type="search"
+              placeholder="Search your product"
+            />
+            <button
+              onClick={handleSearch}
+              className=" px-4 py-2 bg-gray-900 text-white rounded-md "
+            >
+              Search
+            </button>
           </div>
           <h2 className="text-xl pb-4 font-bold">Filter By Price</h2>
           <select
@@ -108,17 +116,9 @@ const AllBrand = () => {
 
               <TabPanel>
                 <div className=" pt-10 grid lg:grid-cols-3 grid-cols-1 md:grid-cols-2 gap-10">
-                  {filterSearch.length > 0 ?
-                  
-                  filterSearch.map((item) => (
-                    <All item={item} />
-                  ))
-                :
-                filteredBrand.map((item) => (
-                  <All item={item} />
-                ))
-                }
-                 
+                  {filterSearch.length > 0
+                    ? filterSearch.map((item) => <All item={item} />)
+                    : filteredBrand.map((item) => <All item={item} />)}
                 </div>
               </TabPanel>
               <TabPanel>
