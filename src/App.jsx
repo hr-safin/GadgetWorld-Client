@@ -70,7 +70,7 @@ function App() {
           ),
           loader: () =>
             fetch(
-              "http://localhost:5000/myCart"
+              "https://server-brand-shop-blush.vercel.app/myCart"
             ),
         },
         {
@@ -91,7 +91,7 @@ function App() {
           ),
           loader: ({ params }) =>
             fetch(
-              `http://localhost:5000/${params.id}`
+              `https://server-brand-shop-blush.vercel.app/${params.id}`
             ),
         },
         {
@@ -103,7 +103,7 @@ function App() {
           ),
           loader: ({ params }) =>
             fetch(
-              `http://localhost:5000/${params.id}`
+              `https://server-brand-shop-blush.vercel.app/${params.id}`
             ),
         },
       ],
