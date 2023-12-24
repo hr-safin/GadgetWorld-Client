@@ -92,7 +92,7 @@ const MyCart = () => {
                     </div>
                 </div>
             </div>
-        <div class="relative w-[60%] overflow-x-auto shadow-md sm:rounded-lg">
+        <div class="relative lg:w-[60%] overflow-x-auto shadow-md sm:rounded-lg">
     <table class="w-full text-sm text-left rtl:text-right text-gray-600 ">
         <thead class="text-xs text-gray-700 uppercase bg-gray-50  ">
             <tr>

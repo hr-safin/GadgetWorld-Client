@@ -105,21 +105,21 @@ export default function NavbarActionButtonPreview() {
                 ></span>
               </div>
             </button>
-            <ul className=" hidden sm:flex gap-6 justify-center bottom-8 absolute right-16 items-center lg:hidden">
+            <ul className=" hidden sm:flex gap-6 justify-center bottom-2 absolute right-28 items-center lg:hidden">
               <NavLink className="text-gray-600 text-sm" to="/">
                 Home
               </NavLink>
-              <NavLink className="text-gray-600 text-sm" to="/blog">
-                Blog
-              </NavLink>
+              <NavLink
+                  to="/brand"
+                  className="flex text-base items-center gap-2 py-4 transition-colors duration-300  text-gray-700 hover:text-gray-500 focus:text-gray-600 focus:outline-none focus-visible:outline-none lg:px-4  cursor-pointer"
+                >
+                  <span>Brands</span>
+                </NavLink>
+              
               <NavLink className="text-gray-600 text-sm" to="/addProduct">
                 AddProduct
               </NavLink>
-              <input
-                onChange={toggle}
-                type="checkbox"
-                className="toggle toggle-sm"
-              />
+             
             </ul>
             {/*      <!-- Navigation links --> */}
             <ul
@@ -150,20 +150,9 @@ export default function NavbarActionButtonPreview() {
                   to="/brand"
                   className="flex text-base items-center gap-2 py-4 transition-colors duration-300  text-gray-700 hover:text-gray-500 focus:text-gray-600 focus:outline-none focus-visible:outline-none lg:px-4  cursor-pointer"
                 >
-                  <span>Brand</span>
+                  <span>Brands</span>
                 </NavLink>
               </li>
-              {/* <li
-                onClick={() => setIsToggleOpen(!true)}
-                className="flex items-stretch"
-              >
-                <NavLink
-                  to="/blog"
-                  className="flex items-center gap-2 py-4 transition-colors duration-300  text-gray-700 hover:text-gray-500 focus:text-gray-600 focus:outline-none focus-visible:outline-none lg:px-4  cursor-pointer"
-                >
-                  <span>Blog</span>
-                </NavLink>
-              </li> */}
               <li
                 onClick={() => setIsToggleOpen(!true)}
                 className="flex items-stretch"
@@ -257,9 +246,8 @@ export default function NavbarActionButtonPreview() {
                     >
                       <img
                         src={
-                          user.photoURL
-                          // ? user.photoURL
-                          // : "https://i.pinimg.com/originals/ff/a0/9a/ffa09aec412db3f54deadf1b3781de2a.png"
+                          user?.photoURL
+                          
                         }
                       />
                     </div>
