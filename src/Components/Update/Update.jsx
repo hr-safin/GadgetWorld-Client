@@ -23,7 +23,7 @@ const Update = () => {
         const NewAddProduct = {name,brandName, price, description, type, rating, photo}
         console.log(NewAddProduct)
 
-        fetch(`https://server-brand-shop-aqy2ii6z0-safin-rahmans-projects.vercel.app/update/${data._id}`,{
+        fetch(`http://localhost:5000/update/${data._id}`,{
             method : "PUT",
             headers : {
                 "Content-Type" : "application/json"

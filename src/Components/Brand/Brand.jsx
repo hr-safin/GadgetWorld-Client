@@ -5,7 +5,6 @@ const Brand = () => {
     window.scrollTo(0,0)
 
     const [brand, setBrand] = useState([])
-
     useEffect(() => {
         fetch("brand.json")
         .then(res => res.json())

@@ -1,7 +1,4 @@
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./Components/Layout/Layout";
 import Error from "./Components/Error/Error";
 import Home from "./Components/Home/Home";
@@ -20,83 +17,110 @@ import {
   QueryClient,
   QueryClientProvider,
   useQuery,
-} from '@tanstack/react-query'
+} from "@tanstack/react-query";
 import AllBrand from "./Components/AllBrand/AllBrand";
 
-const queryClient = new QueryClient()
+const queryClient = new QueryClient();
 function App() {
-
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    setLoading(true)
+    setLoading(true);
     setTimeout(() => {
-      setLoading(false)
-    },1000)
-  }, [])
-  
+      setLoading(false);
+    }, 1000);
+  }, []);
+
   const router = new createBrowserRouter([
     {
-      path : "/",
-      element : <Layout />,
-      errorElement : <Error />,
-      children : [
+      path: "/",
+      element: <Layout />,
+      errorElement: <Error />,
+      children: [
         {
-          path : "/",
-          element : <Home />
+          path: "/",
+          element: <Home />,
         },
         {
-          path : "/login",
-          element : <Login />
+          path: "/login",
+          element: <Login />,
         },
         {
-          path : "/register",
-          element : <Registration /> 
+          path: "/register",
+          element: <Registration />,
         },
         {
-           path : "/brand",
-           element : <AllBrand />
+          path: "/brand",
+          element: <AllBrand />,
         },
         {
-          path : "/addProduct",
-          element : <PrivateRouter><AddProduct /></PrivateRouter>
+          path: "/addProduct",
+          element: (
+            <PrivateRouter>
+              <AddProduct />
+            </PrivateRouter>
+          ),
         },
         {
-          path : "/myCart",
-          element : <PrivateRouter><MyCart /></PrivateRouter>,
-          loader : () => fetch("https://server-brand-shop-aqy2ii6z0-safin-rahmans-projects.vercel.app/myCart")
+          path: "/myCart",
+          element: (
+            <PrivateRouter>
+              <MyCart />
+            </PrivateRouter>
+          ),
+          loader: () =>
+            fetch(
+              "http://localhost:5000/myCart"
+            ),
         },
         {
-          path : "/brand/:name",
-          element : <PrivateRouter><Brand /></PrivateRouter>,
-          loader : () => fetch("../brand.json")
+          path: "/brand/:name",
+          element: (
+            <PrivateRouter>
+              <Brand />
+            </PrivateRouter>
+          ),
+          loader: () => fetch("../brand.json"),
         },
         {
-          path : "/update/:id",
-          element : <PrivateRouter><Update /></PrivateRouter>,
-          loader : ({params}) => fetch(`https://server-brand-shop-aqy2ii6z0-safin-rahmans-projects.vercel.app/update/${params.id}`)
+          path: "/update/:id",
+          element: (
+            <PrivateRouter>
+              <Update />
+            </PrivateRouter>
+          ),
+          loader: ({ params }) =>
+            fetch(
+              `http://localhost:5000/${params.id}`
+            ),
         },
         {
-          path : "/details/:id",
-          element : <PrivateRouter><Details /></PrivateRouter>,
-          loader : ({params}) => fetch(`https://server-brand-shop-aqy2ii6z0-safin-rahmans-projects.vercel.app/details/${params.id}`)
-        }
-      ]
-    }
-  ])
+          path: "/details/:id",
+          element: (
+            <PrivateRouter>
+              <Details />
+            </PrivateRouter>
+          ),
+          loader: ({ params }) =>
+            fetch(
+              `http://localhost:5000/${params.id}`
+            ),
+        },
+      ],
+    },
+  ]);
 
-  return loading ? <div className=" text-blue-600 text-3xl bg-gray-900 h-screen flex justify-center items-center">
-     <span className="loading loading-dots loading-lg"></span>
-  </div> : (
+  return loading ? (
+    <div className=" text-blue-600 text-3xl bg-gray-900 h-screen flex justify-center items-center">
+      <span className="loading loading-dots loading-lg"></span>
+    </div>
+  ) : (
     <QueryClientProvider client={queryClient}>
       <AuthContext>
-    <RouterProvider router={router}></RouterProvider>
-      
-    </AuthContext>
+        <RouterProvider router={router}></RouterProvider>
+      </AuthContext>
     </QueryClientProvider>
-  )
-    
-    
+  );
 }
 
-export default App
+export default App;

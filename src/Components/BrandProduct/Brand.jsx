@@ -4,26 +4,22 @@ import AddBrand from './AddBrand';
 import CardBrand from './CardBrand';
 import AuthContext, { AuthProvider } from '../AuthContext/AuthContext';
 import { FETCH_STATUS } from '../FetchStatus';
+import useAxiosPublic from '../../Hook/useAxiosPublic';
 
 const Brand = () => {
     window.scrollTo(0,0)
 
     const {name} = useParams()
-    // const {isLoading} = useContext(AuthProvider)
+    const axiosPublic = useAxiosPublic()
     const [isLoading, setLoading] = useState(FETCH_STATUS)
-    // console.log(name)
-    // console.log(brands)
     const [getData, setData] = useState([])
 
-    // const brand = brands.forEach(data => data.brandName)
-    // console.log(brand)
 
     useEffect(() => {
-        fetch("https://server-brand-shop-aqy2ii6z0-safin-rahmans-projects.vercel.app/brand")
-        .then(res => res.json())
-        .then(data => {
+        axiosPublic.get("/brand")
+        .then(res => {
             console.log(data)
-            const matched = data.filter(data =>  data.brandName === name)
+            const matched = res.data.filter(data =>  data.brandName === name)
             setData(matched)
             setLoading(false)
             

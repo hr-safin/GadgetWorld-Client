@@ -24,7 +24,7 @@ const AddProduct = () => {
         const addProduct = {name,brandName, price, description, type, rating, banner, photo}
         console.log(addProduct)
 
-        fetch("https://server-brand-shop-aqy2ii6z0-safin-rahmans-projects.vercel.app/addProduct", {
+        fetch("http://localhost:5000/addProduct", {
             method : "POST",
             headers : {
                 "Content-Type" : "application/json"

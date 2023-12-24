@@ -5,10 +5,12 @@ import 'sweetalert2/src/sweetalert2.scss'
 import { AuthProvider } from "../AuthContext/AuthContext";
 import useQueryHook from "../../Hook/useQueryHook";
 import useCart from "../../Hook/useCart";
+import useAxiosPublic from "../../Hook/useAxiosPublic";
 
 const Details = () => {
     window.scrollTo(0,0)
   const data = useLoaderData();
+  const axiosPublic = useAxiosPublic()
   const {user} = useContext(AuthProvider)
   console.log(user.email)
   const [carts, refetch] = useCart()
@@ -24,16 +26,9 @@ const Details = () => {
 
     const cartInfo = {name, brandName, type, price, description, photo, rating,email}
 
-    fetch("https://server-brand-shop-aqy2ii6z0-safin-rahmans-projects.vercel.app/myCart", {
-        method : "POST",
-        headers : {
-            "Content-Type" : "application/json"
-        },
-        body : JSON.stringify(cartInfo)
-    })
-    .then(res => res.json())
-    .then(data => {
-        if(data.insertedId){
+    axiosPublic.post("/myCart", cartInfo)
+    .then(res => {
+        if(res.data.insertedId){
           refetch()
             Swal.fire(
                 'Good job!',
