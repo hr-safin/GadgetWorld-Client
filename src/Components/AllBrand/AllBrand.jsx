@@ -16,10 +16,20 @@ const AllBrand = () => {
   const [brand, refetch] = useBrand();
   const [selectedPrice, setSelectedPrice] = useState("all");
   const [currentPage, setCurrentPage] = useState(1);
+  const [display, setDisplay] = useState(null)
+  const [filterSearch, setFilterSearch] = useState([])
 
   const handleSelectPrice = (e) => {
     setSelectedPrice(e.target.value);
   };
+
+  const handleSearch = () => {
+    console.log(display)
+    const filterItems = brand.filter(item => item.name.toLowerCase().includes(display))
+    
+    console.log(filterItems)
+    setFilterSearch(filterItems)
+  }
 
   const filterPrice = (brand) => {
     const startIndex = (currentPage - 1) * cardsPerPage;
@@ -65,12 +75,19 @@ const AllBrand = () => {
         <h3 className="text-2xl te lg:text-4xl font-bold">Popular Brand</h3>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-11 pb-20 gap-10 lg:px-24 px-4">
-        <div className="bg-gray-100 px-5 py-4 mx-auto w-full md:w-[300px] rounded-md shadow-md h-[140px] col-span-8 lg:col-span-3">
+        <div className="bg-gray-100 px-4 py-4 mx-auto w-full md:w-[330px] rounded-md shadow-md h-[240px] col-span-8 lg:col-span-3">
+          <div className=" flex gap-2 items-center pb-6 pt-5">
+            <input
+            
+            onChange={(e) => setDisplay(e.target.value)}
+            className=" w-[400px] md:w-[72%] border border-gray-900 rounded-md px-3 p-2" type="search" placeholder="Search your product" />
+            <button onClick={handleSearch} className=" px-4 py-2 bg-gray-900 text-white rounded-md ">Search</button>
+          </div>
           <h2 className="text-xl pb-4 font-bold">Filter By Price</h2>
           <select
             value={selectedPrice}
             onChange={handleSelectPrice}
-            className="select w-full max-w-xs"
+            className="select w-full max-w-lg md:max-w-xs"
           >
             <option value="all">All Prices</option>
             <option value="low">Low Range (8000 - 30000)</option>
@@ -90,35 +107,43 @@ const AllBrand = () => {
               </TabList>
 
               <TabPanel>
-                <div className=" pt-10 grid lg:grid-cols-3 grid-cols-1 gap-10">
-                  {filteredBrand.map((item) => (
+                <div className=" pt-10 grid lg:grid-cols-3 grid-cols-1 md:grid-cols-2 gap-10">
+                  {filterSearch.length > 0 ?
+                  
+                  filterSearch.map((item) => (
                     <All item={item} />
-                  ))}
+                  ))
+                :
+                filteredBrand.map((item) => (
+                  <All item={item} />
+                ))
+                }
+                 
                 </div>
               </TabPanel>
               <TabPanel>
-                <div className=" pt-10 grid lg:grid-cols-3 grid-cols-1 gap-10">
+                <div className=" pt-10 grid lg:grid-cols-3 grid-cols-1 md:grid-cols-2 gap-10">
                   {apple.map((item) => (
                     <Iphone item={item} />
                   ))}
                 </div>
               </TabPanel>
               <TabPanel>
-                <div className=" pt-10 grid lg:grid-cols-3 grid-cols-1 gap-10">
+                <div className=" pt-10 grid lg:grid-cols-3 grid-cols-1 md:grid-cols-2 gap-10">
                   {samsung.map((item) => (
                     <Samsung item={item} />
                   ))}
                 </div>
               </TabPanel>
               <TabPanel>
-                <div className=" pt-10 grid lg:grid-cols-3 grid-cols-1 gap-10">
+                <div className=" pt-10 grid lg:grid-cols-3 grid-cols-1 md:grid-cols-2 gap-10">
                   {onePlus.map((item) => (
                     <OnePlus item={item} />
                   ))}
                 </div>
               </TabPanel>
               <TabPanel>
-                <div className=" pt-10 grid lg:grid-cols-3 grid-cols-1 gap-10">
+                <div className=" pt-10 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10">
                   {realMe.map((item) => (
                     <Realme item={item} />
                   ))}
