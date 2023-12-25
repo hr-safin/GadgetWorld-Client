@@ -63,7 +63,7 @@ const Login = () => {
         .catch(error => setError("password or email do not match"))
   }
     return (
-        <div className=' pt-6 lg:pt-0'>
+        <div className=' py-20 lg:pt-0'>
             <section className="">
         <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
           <div className="w-full bg-white rounded-lg border  md:mt-0 sm:max-w-md xl:p-0 ">

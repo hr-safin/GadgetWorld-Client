@@ -4,7 +4,7 @@ import React from 'react';
 const Footer = () => {
     return (
         <div>
-          <footer class="bg-white dark:bg-gray-900 ">
+          <footer class="bg-gray-900 ">
     <div class="container lg:px-28 px-4 py-12 mx-auto">
         <div class="md:flex md:-mx-3 md:items-center md:justify-between">
             <h1 class="text-xl font-semibold tracking-tight text-gray-800 md:mx-3 xl:text-2xl dark:text-white">We Accept</h1>

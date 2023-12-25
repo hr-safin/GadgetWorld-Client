@@ -56,10 +56,10 @@ const AllBrand = () => {
   };
 
   const filteredBrand = filterPrice(brand);
-  const apple = brand.filter((item) => item.brand === "Apple");
-  const samsung = brand.filter((item) => item.brand === "Samsung");
-  const onePlus = brand.filter((item) => item.brand === "OnePlus");
-  const realMe = brand.filter((item) => item.brand === "RealMe");
+  const apple = filteredBrand.filter((item) => item.brand === "Apple");
+  const samsung = filteredBrand.filter((item) => item.brand === "Samsung");
+  const onePlus = filteredBrand.filter((item) => item.brand === "OnePlus");
+  const realMe = filteredBrand.filter((item) => item.brand === "RealMe");
 
   const totalPage = Math.ceil(brand.length / cardsPerPage);
 
