@@ -30,50 +30,26 @@ export default function Home() {
     infinite: true,
   };
 
-  // const {name} = useContext(AuthProvideContext)
   return (
 
     <>
-     {/* <div data-aos="fade-up"
-     data-aos-duration="3000">
-     <Carousel
-     
-     className=" pt-4  text-center flex justify-center flex-col lg:px-24">
-                <div>
-                    <img src="https://www.gadgetmonkeybd.com/public/uploads/all/WOh2tZ5sVdJpSCu39fxLa0FFIRCbkhmop9VewU9Y.jpg" />
-                   
-                </div>
-                <div>
-                    <img src="https://www.gadgetmonkeybd.com/public/uploads/all/AT82vTRU91c5z4ftoLXSassyJQl07XDoBGtvC1Kz.jpg" />
-                  
-                </div>
-                <div>
-                    <img src="https://www.gadgetmonkeybd.com/public/uploads/all/1WjNGP6SsssOdaK4wGWY3o0jIiTn4fOMDIsWVUlg.jpg" />
-                  
-                </div>
-                <div>
-                    <img src="https://www.gadgetmonkeybd.com/public/uploads/all/JMwviK7LCMV0aJ9DbRMpHFJU9GmFO3G8g7l53LMc.jpg" />
-                  
-                </div>
-            </Carousel>
-     </div>
-     */}
+
      <div className=" pb-10">
 
      <Slider className="  pt-6" {...settings}>
       <div>
-        <img className="w-full lg:px-24" src="https://www.gadgetmonkeybd.com/public/uploads/all/WOh2tZ5sVdJpSCu39fxLa0FFIRCbkhmop9VewU9Y.jpg" alt="Product 1" />
+        <img className="lg:w-full h-[200px]  md:h-[400px] lg:h-[500px]  lg:px-24 px-4" src="https://www.gadgetmonkeybd.com/public/uploads/all/WOh2tZ5sVdJpSCu39fxLa0FFIRCbkhmop9VewU9Y.jpg" alt="Product 1" />
         
       </div>
       <div>
-        <img className="w-full lg:px-24" src="https://www.gadgetmonkeybd.com/public/uploads/all/AT82vTRU91c5z4ftoLXSassyJQl07XDoBGtvC1Kz.jpg" alt="Product 2" />
+        <img className="lg:w-full h-[200px] md:h-[400px] lg:h-[500px]  lg:px-24 px-4" src="https://www.gadgetmonkeybd.com/public/uploads/all/AT82vTRU91c5z4ftoLXSassyJQl07XDoBGtvC1Kz.jpg" alt="Product 2" />
        
       </div>
       <div>
-        <img className="w-full lg:px-24" src="https://www.gadgetmonkeybd.com/public/uploads/all/JMwviK7LCMV0aJ9DbRMpHFJU9GmFO3G8g7l53LMc.jpg" alt="Product 3" />
+        <img className="lg:w-full h-[200px] md:h-[400px] lg:h-[500px]  lg:px-24 px-4" src="https://www.gadgetmonkeybd.com/public/uploads/all/JMwviK7LCMV0aJ9DbRMpHFJU9GmFO3G8g7l53LMc.jpg" alt="Product 3" />
       </div>
       <div>
-                    <img className="w-full lg:px-24" src="https://www.gadgetmonkeybd.com/public/uploads/all/1WjNGP6SsssOdaK4wGWY3o0jIiTn4fOMDIsWVUlg.jpg" />
+          <img className="lg:w-full h-[200px] md:h-[400px] lg:h-[500px]  lg:px-24 px-4" src="https://www.gadgetmonkeybd.com/public/uploads/all/1WjNGP6SsssOdaK4wGWY3o0jIiTn4fOMDIsWVUlg.jpg" />
                   
                 </div>
     </Slider>

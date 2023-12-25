@@ -52,7 +52,7 @@ export default function NavbarActionButtonPreview() {
     <>
       {/*<!-- Component: Navbar with --> */}
       <header className="border-b-1 relative z-20 w-full border-b  after:absolute after:top-full after:left-0 after:z-10 after:block after:h-px after:w-full after:bg-slate-200  dark:border-gray-900 lg:border-slate-200 lg:backdrop-blur-sm lg:after:hidden lg:px-[90px]">
-        <div className="relative mx-auto max-w-full px-2 lg:max-w-5xl xl:max-w-7xl 2xl:max-w-[96rem]">
+        <div className="relative mx-auto max-w-full px-4 lg:max-w-5xl xl:max-w-7xl 2xl:max-w-[96rem]">
           <nav
             aria-label="main navigation"
             className="flex h-[4.5rem] items-stretch justify-between font-medium text-slate-600"
@@ -206,7 +206,7 @@ export default function NavbarActionButtonPreview() {
               </div>
             </ul>
 
-            <div className=" gap-2 items-center pl-[80px] pt-1  lg:pl-0 sm:pl-60 justify-center flex lg:flex">
+            <div className=" gap-2 items-center pl-[130px] pt-1  lg:pl-0 sm:pl-60 justify-center flex lg:flex">
               <div
                 onClick={() => setIsToggleOpen(!true)}
                 className="flex  lg:hidden lg:items-center flex-col   lg:pr-4 "
@@ -239,7 +239,7 @@ export default function NavbarActionButtonPreview() {
               <div>
               {user ? (
                 <>
-                  <div className="avatar">
+                  <div className="avatar pr-4">
                     <div
                       onClick={handleShow}
                       className="lg:w-10 w-8 cursor-pointer ring-2 ring-indigo-300 rounded-full"

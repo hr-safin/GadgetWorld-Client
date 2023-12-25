@@ -81,7 +81,7 @@ const Contact = () => {
 
             <div class="mt-8 lg:w-1/2 lg:mx-6">
                 <div
-                    class="w-full px-8 py-10 mx-auto overflow-hidden bg-white rounded-lg  lg:max-w-xl shadow-gray-300/50 dark:shadow-black/50">
+                    class="w-full px-2 py-10 mx-auto overflow-hidden bg-white rounded-lg  max-w-2xl shadow-gray-300/50 dark:shadow-black/50">
                     
 
                     <form class="mt-6">
