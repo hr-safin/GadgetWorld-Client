@@ -18,7 +18,6 @@ const Brand = () => {
     useEffect(() => {
         axiosPublic.get("/brand")
         .then(res => {
-            console.log(data)
             const matched = res.data.filter(data =>  data.brandName === name)
             setData(matched)
             setLoading(false)
