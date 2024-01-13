@@ -32,10 +32,9 @@ const AllBrand = () => {
     setFilterSearch(filterItems);
   };
 
+  const startIndex = (currentPage - 1) * cardsPerPage;
+  const lastIndex = startIndex + cardsPerPage;
   const filterPrice = (brand) => {
-    const startIndex = (currentPage - 1) * cardsPerPage;
-    const lastIndex = startIndex + cardsPerPage;
-
     switch (selectedPrice) {
       case "low":
         return brand.filter(
@@ -51,15 +50,20 @@ const AllBrand = () => {
         );
 
       default:
-        return brand.slice(startIndex, lastIndex);
+        return brand.slice(startIndex, lastIndex), brand;
     }
   };
 
   const filteredBrand = filterPrice(brand);
+  console.log(filteredBrand);
   const apple = filteredBrand.filter((item) => item.brand === "Apple");
+  console.log(apple);
   const samsung = filteredBrand.filter((item) => item.brand === "Samsung");
+  console.log(samsung);
   const onePlus = filteredBrand.filter((item) => item.brand === "OnePlus");
+  console.log(onePlus);
   const realMe = filteredBrand.filter((item) => item.brand === "RealMe");
+  console.log(realMe);
 
   const totalPage = Math.ceil(brand.length / cardsPerPage);
 
@@ -68,7 +72,7 @@ const AllBrand = () => {
   };
 
   const handleNextPage = () => {
-    setCurrentPage((prev) => Math.min(prev + 1), totalPage);
+    setCurrentPage((prev) => Math.min(prev + 1, totalPage));
   };
   return (
     <div>
@@ -117,8 +121,16 @@ const AllBrand = () => {
               <TabPanel>
                 <div className=" pt-10 grid lg:grid-cols-3 grid-cols-1 md:grid-cols-2 gap-10">
                   {filterSearch.length > 0
-                    ? filterSearch.map((item) => <All item={item} />)
-                    : filteredBrand.map((item) => <All item={item} />)}
+                    ? filterSearch.map((item) => (
+                        <All item={item} key={item.id} />
+                      ))
+                    : selectedPrice !== "all"
+                    ? filteredBrand.map((item) => (
+                        <All item={item} key={item.id} />
+                      ))
+                    : brand
+                        .slice(startIndex, lastIndex)
+                        .map((item) => <All item={item} key={item.id} />)}
                 </div>
               </TabPanel>
               <TabPanel>
