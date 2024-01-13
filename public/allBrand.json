@@ -1,109 +1,109 @@
 [
     {
-      "name": "IPhone XS",
-      "photo": "https://gngbd.com/assets/images/product/featured/63a2e6b03c1341671620272.png",
-      "price": 32500,
+      "name": "IPhone 14",
+      "photo": "https://www.applegadgetsbd.com/_next/image?url=https%3A%2F%2Fadminapi.applegadgetsbd.com%2Fstorage%2Fmedia%2Fthumb%2FiPhone-14-Purple-6116.jpg&w=256&q=100",
+      "price": 62500,
       "brand": "Apple"
     },
     {
-      "name": "IPhone 12 Pro Max",
-      "photo": "https://gngbd.com/assets/images/product/featured/63a93081766ea1672032385.png",
-      "price": 60000,
+      "name": "IPhone 14 Plus",
+      "photo": "https://www.applegadgetsbd.com/_next/image?url=https%3A%2F%2Fadminapi.applegadgetsbd.com%2Fstorage%2Fmedia%2Fthumb%2FiPhone-14-Plus-Blue-5074.jpg&w=256&q=100",
+      "price": 80000,
       "brand": "Apple"
     },
     {
-      "name": "IPhone 13 Pro Max",
-      "photo": "https://gngbd.com/assets/images/product/featured/63a93182a03f91672032642.png",
-      "price": 90000,
+      "name": "IPhone 11",
+      "photo": "https://www.applegadgetsbd.com/_next/image?url=https%3A%2F%2Fadminapi.applegadgetsbd.com%2Fstorage%2Fmedia%2Fthumb%2FiPhone-11-Black-5949.jpg&w=256&q=100",
+      "price": 40000,
       "brand": "Apple"
     },
     {
-      "name": "IPhone 13 Pro",
-      "photo": "https://gngbd.com/assets/images/product/featured/63a934e5a9d5f1672033509.png",
+      "name": "IPhone 14 Pro",
+      "photo": "https://www.applegadgetsbd.com/_next/image?url=https%3A%2F%2Fadminapi.applegadgetsbd.com%2Fstorage%2Fmedia%2Fthumb%2FiPhone-14-Pro-Deep-Purple-7300.jpg&w=256&q=100",
       "price": 85000,
       "brand": "Apple"
     },
     {
       "name": "IPhone 14 Pro Max",
-      "photo": "https://gngbd.com/assets/images/product/featured/63a93847cc3001672034375.png",
+      "photo": "https://www.applegadgetsbd.com/_next/image?url=https%3A%2F%2Fadminapi.applegadgetsbd.com%2Fstorage%2Fmedia%2Fthumb%2FiPhone-14-Pro-Max-9907.jpg&w=256&q=100",
       "price": 110000,
       "brand": "Apple"
     },
     {
       "name": "IPhone 12 ",
-      "photo": "https://gngbd.com/assets/images/product/featured/63ad4dc02a3cc1672302016.png",
+      "photo": "https://www.applegadgetsbd.com/_next/image?url=https%3A%2F%2Fadminapi.applegadgetsbd.com%2Fstorage%2Fmedia%2Fthumb%2F1533-41338.jpg&w=256&q=100",
       "price": 55000,
       "brand": "Apple"
     },
     {
-      "name": "Galaxy A03",
-      "photo": "https://gngbd.com/assets/images/product/featured/6398608834bbd1670930568.png",
-      "price": 10000,
-      "brand": "Samsung"
-    },
-    {
-      "name": "Galaxy S10+",
-      "photo": "https://gngbd.com/assets/images/product/featured/63a2cf10c0beb1671614224.png",
-      "price": 25000,
-      "brand": "Samsung "
-    },
-    {
-      "name": "Galaxy S20",
-      "photo": "https://gngbd.com/assets/images/product/featured/63a2d0aacda7f1671614634.png",
+      "name": "Galaxy A24",
+      "photo": "https://www.applegadgetsbd.com/_next/image?url=https%3A%2F%2Fadminapi.applegadgetsbd.com%2Fstorage%2Fmedia%2Fthumb%2FGalaxy-A24-(5)-2544.jpg&w=256&q=100",
       "price": 20000,
       "brand": "Samsung"
     },
     {
+      "name": "Galaxy F23 5G",
+      "photo": "https://www.applegadgetsbd.com/_next/image?url=https%3A%2F%2Fadminapi.applegadgetsbd.com%2Fstorage%2Fmedia%2Fthumb%2FGalaxy-F23-Aqua-Blue-7754.jpg&w=256&q=100",
+      "price": 25000,
+      "brand": "Samsung "
+    },
+    {
+      "name": "Galaxy S23+",
+      "photo": "https://www.applegadgetsbd.com/_next/image?url=https%3A%2F%2Fadminapi.applegadgetsbd.com%2Fstorage%2Fmedia%2Fthumb%2FGalaxy-S23-Lavender-4600.jpg&w=256&q=100",
+      "price": 65000,
+      "brand": "Samsung"
+    },
+    {
       "name": "Galaxy S23 Ultra",
-      "photo": "https://gngbd.com/assets/images/product/featured/64229d03443751679990019.png",
+      "photo": "https://www.applegadgetsbd.com/_next/image?url=https%3A%2F%2Fadminapi.applegadgetsbd.com%2Fstorage%2Fmedia%2Fthumb%2FGalaxy-S23-Ultra-Cream-1280.jpg&w=256&q=100",
       "price": 100000,
       "brand": "Samsung"
     },
     {
-      "name": "Galaxy Note 20",
-      "photo": "https://gngbd.com/assets/images/product/featured/64575980c6cab1683446144.png",
+      "name": "Galaxy S21 FE",
+      "photo": "https://www.applegadgetsbd.com/_next/image?url=https%3A%2F%2Fadminapi.applegadgetsbd.com%2Fstorage%2Fmedia%2Fthumb%2F4204-88781.jpg&w=256&q=100",
       "price": 31000,
       "brand": "Samsung"
     },
     {
-      "name": "Galaxy Note 10",
-      "photo": "https://gngbd.com/assets/images/product/featured/64575d903d54e1683447184.png",
-      "price": 129.99,
+      "name": "Galaxy A34 5G",
+      "photo": "https://www.applegadgetsbd.com/_next/image?url=https%3A%2F%2Fadminapi.applegadgetsbd.com%2Fstorage%2Fmedia%2Fthumb%2FGalaxy-A34-5G-Awesome-Graphite-4542.jpg&w=256&q=100",
+      "price": 28000,
       "brand": "Samsung"
     },
     {
-      "name": "OnePlus Nord",
-      "photo": "https://gngbd.com/assets/images/product/featured/63a04e6f2745d1671450223.png",
-      "price": 18000,
+      "name": "OnePlus 11R",
+      "photo": "https://www.applegadgetsbd.com/_next/image?url=https%3A%2F%2Fadminapi.applegadgetsbd.com%2Fstorage%2Fmedia%2Fthumb%2FOnePlus-11R-5G-Sonic-Black-4578.jpg&w=256&q=100",
+      "price": 58000,
       "brand": "OnePlus"
     },
     {
-      "name": "One Plus 6T",
-      "photo": "https://gngbd.com/assets/images/product/featured/63a2f24af0ae51671623242.png",
-      "price": 23000,
+      "name": "One Plus ACE",
+      "photo": "https://www.applegadgetsbd.com/_next/image?url=https%3A%2F%2Fadminapi.applegadgetsbd.com%2Fstorage%2Fmedia%2Fthumb%2FOnePlus-ACE-Black-1082.jpg&w=256&q=100",
+      "price": 33000,
       "brand": "OnePlus"
     },
     {
-      "name": "One Plus 8 5G",
-      "photo": "https://gngbd.com/assets/images/product/featured/63a2fa7d60de61671625341.png",
+      "name": "One Plus 10R",
+      "photo": "https://www.applegadgetsbd.com/_next/image?url=https%3A%2F%2Fadminapi.applegadgetsbd.com%2Fstorage%2Fmedia%2Fthumb%2F5299-77789.jpg&w=256&q=100",
       "price": 40000,
       "brand": "OnePlus"
     },
     {
-      "name": "One Plus Nord N100",
-      "photo": "https://gngbd.com/assets/images/product/featured/63a2fbf38fd111671625715.png",
+      "name": "One Plus Nord 2T 5G",
+      "photo": "https://www.applegadgetsbd.com/_next/image?url=https%3A%2F%2Fadminapi.applegadgetsbd.com%2Fstorage%2Fmedia%2Fthumb%2FOnePlus-Nord-2T-5G-Jade-Fog-5269.jpg&w=256&q=100",
       "price": 12000,
       "brand": "OnePlus"
     },
     {
-      "name": "One Plus 9 5G",
-      "photo": "https://gngbd.com/assets/images/product/featured/63afddfd1bf191672470013.png",
-      "price": 70000,
+      "name": "One Plus Open",
+      "photo": "https://www.applegadgetsbd.com/_next/image?url=https%3A%2F%2Fadminapi.applegadgetsbd.com%2Fstorage%2Fmedia%2Fthumb%2FEmerald-Dusk-8232.jpg&w=256&q=100",
+      "price": 170000,
       "brand": "OnePlus"
     },
     {
-      "name": "One Plus 7T Pro",
-      "photo": "https://gngbd.com/assets/images/product/featured/63afe1097d8ce1672470793.png",
+      "name": "One Plus Nord 300",
+      "photo": "https://www.applegadgetsbd.com/_next/image?url=https%3A%2F%2Fadminapi.applegadgetsbd.com%2Fstorage%2Fmedia%2Fthumb%2FOnePlus-Nord-N300-5G-Midnight-Jade-6361.jpg&w=256&q=100",
       "price": 43000,
       "brand": "OnePlus"
     },
@@ -114,32 +114,32 @@
       "brand": "RealMe"
     },
     {
-      "name": "Narzo 50",
-      "photo": "https://gngbd.com/assets/images/product/featured/63b0121966d921672483353.png",
-      "price": 23000,
+      "name": "Narzo 60 Pro",
+      "photo": "https://www.applegadgetsbd.com/_next/image?url=https%3A%2F%2Fadminapi.applegadgetsbd.com%2Fstorage%2Fmedia%2Fthumb%2Frealme-narzo-60-Pro-5G-Cosmic-Black-5338.jpg&w=256&q=100",
+      "price": 33000,
       "brand": "RealMe"
     },
     {
-      "name": "RealMe 9",
-      "photo": "https://gngbd.com/assets/images/product/featured/63b014f207dad1672484082.png",
+      "name": "RealMe 60",
+      "photo": "https://www.applegadgetsbd.com/_next/image?url=https%3A%2F%2Fadminapi.applegadgetsbd.com%2Fstorage%2Fmedia%2Fthumb%2Frealme-Narzo-60-5G-Cosmic-Black-6059.jpg&w=256&q=100",
       "price": 27000,
       "brand": "RealMe"
     },
     {
-      "name": "RealMe 9 Pro" ,
-      "photo": "https://gngbd.com/assets/images/product/featured/63b0178214a071672484738.png",
-      "price": 29000,
-      "brand": "RealMe"
-    },
-    {
-      "name": "RealMe 9i",
-      "photo": "https://gngbd.com/assets/images/product/featured/63b01f35b6e101672486709.png",
+      "name": "RealMe C55" ,
+      "photo": "https://www.applegadgetsbd.com/_next/image?url=https%3A%2F%2Fadminapi.applegadgetsbd.com%2Fstorage%2Fmedia%2Fthumb%2Frealme-C55-Sunshower-6247.jpg&w=256&q=100",
       "price": 21000,
       "brand": "RealMe"
     },
     {
-      "name": "RealMe 9 Speed Edition",
-      "photo": "https://gngbd.com/assets/images/product/featured/63b01af7981bc1672485623.png",
+      "name": "RealMe 11 Pro+",
+      "photo": "https://www.applegadgetsbd.com/_next/image?url=https%3A%2F%2Fadminapi.applegadgetsbd.com%2Fstorage%2Fmedia%2Fthumb%2FRealme-11-Pro-Plus-5G-Oasis-Green-3265.jpg&w=256&q=100",
+      "price": 21000,
+      "brand": "RealMe"
+    },
+    {
+      "name": "RealMe C51",
+      "photo": "https://www.applegadgetsbd.com/_next/image?url=https%3A%2F%2Fadminapi.applegadgetsbd.com%2Fstorage%2Fmedia%2Fthumb%2FRealme-C51-Carbon-Black-5232.jpg&w=256&q=100",
       "price": 30000,
       "brand": "RealMe"
     }
