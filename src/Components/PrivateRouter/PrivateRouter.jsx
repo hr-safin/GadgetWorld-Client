@@ -11,7 +11,7 @@ const PrivateRouter = ({children}) => {
     return <div className=' h-screen flex justify-center items-center'><span className="loading loading-spinner loading-lg"></span>
     </div>
    }
-    if(user){
+    if(user?.email){
         return children
     }
     return <Navigate state={location.pathname} to="/login"></Navigate>

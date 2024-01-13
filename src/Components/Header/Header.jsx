@@ -110,16 +110,16 @@ export default function NavbarActionButtonPreview() {
                 Home
               </NavLink>
               <NavLink
-                  to="/brand"
-                  className="flex text-base items-center gap-2 py-4 transition-colors duration-300  text-gray-700 hover:text-gray-500 focus:text-gray-600 focus:outline-none focus-visible:outline-none lg:px-4  cursor-pointer"
-                >
-                  <span>Brands</span>
-                </NavLink>
-              
-              <NavLink className="text-gray-600 text-sm" to="/addProduct">
-                AddProduct
+                to="/brand"
+                className="flex text-base items-center gap-2 py-4 transition-colors duration-300  text-gray-700 hover:text-gray-500 focus:text-gray-600 focus:outline-none focus-visible:outline-none lg:px-4  cursor-pointer"
+              >
+                <span>Brands</span>
               </NavLink>
-             
+               
+               {user?.email === "adminhello@gmail.com" ? <NavLink className="text-gray-600 text-sm" to="/addProduct">
+                AddProduct
+              </NavLink> : ""}
+              
             </ul>
             {/*      <!-- Navigation links --> */}
             <ul
@@ -157,12 +157,14 @@ export default function NavbarActionButtonPreview() {
                 onClick={() => setIsToggleOpen(!true)}
                 className="flex items-stretch"
               >
-                <NavLink
-                  to="/addProduct"
-                  className="flex items-center gap-2 py-4 transition-colors duration-300  text-gray-700 hover:text-gray-500 focus:text-gray-600 focus:outline-none focus-visible:outline-none lg:px-4  cursor-pointer"
-                >
-                  <span>Add Product</span>
-                </NavLink>
+                {user?.email === "adminhello@gmail.com" && (
+                  <NavLink
+                    to="/addProduct"
+                    className="flex items-center gap-2 py-4 transition-colors duration-300  text-gray-700 hover:text-gray-500 focus:text-gray-600 focus:outline-none focus-visible:outline-none lg:px-4  cursor-pointer"
+                  >
+                    <span>Add Product</span>
+                  </NavLink>
+                )}
               </li>
               <div
                 onClick={() => setIsToggleOpen(!true)}
@@ -234,53 +236,46 @@ export default function NavbarActionButtonPreview() {
                     </div>
                   </label>
                 </Link>
-                
               </div>
               <div>
-              {user ? (
-                <>
-                  <div className="avatar pr-4">
-                    <div
-                      onClick={handleShow}
-                      className="lg:w-10 w-8 cursor-pointer ring-2 ring-indigo-300 rounded-full"
-                    >
-                      <img
-                        src={
-                          user?.photoURL
-                          
-                        }
-                      />
+                {user ? (
+                  <>
+                    <div className="avatar pr-4">
+                      <div
+                        onClick={handleShow}
+                        className="lg:w-10 w-8 cursor-pointer ring-2 ring-indigo-300 rounded-full"
+                      >
+                        <img src={user?.photoURL} />
+                      </div>
                     </div>
-                  </div>
-                  <div
-                    className={
-                      show
-                        ? " rounded-md flex transition-all duration-700 flex-col justify-start items-center gap-4  bg-gray-100  p-5 absolute right-6 top-20"
-                        : "hidden"
-                    }
-                  >
-                    <h2 className=" text-md">{user.displayName}</h2>
-                    <h2 className=" text-md">{user.email}</h2>
-                    <a
-                      className="text-white cursor-pointer   bg-gray-800  hover:bg-gray-800 focus:ring-4 focus:ring-blue-500 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
-                      onClick={handleLogOut}
+                    <div
+                      className={
+                        show
+                          ? " rounded-md flex transition-all duration-700 flex-col justify-start items-center gap-4  bg-gray-100  p-5 absolute right-6 top-20"
+                          : "hidden"
+                      }
                     >
-                      Sign Out
-                    </a>
+                      <h2 className=" text-md">{user.displayName}</h2>
+                      <h2 className=" text-md">{user.email}</h2>
+                      <a
+                        className="text-white cursor-pointer   bg-gray-800  hover:bg-gray-800 focus:ring-4 focus:ring-blue-500 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
+                        onClick={handleLogOut}
+                      >
+                        Sign Out
+                      </a>
+                    </div>
+                  </>
+                ) : (
+                  <div className="ml-auto hidden lg:flex items-center px-6 lg:ml-0 lg:p-0">
+                    <Link
+                      to="/login"
+                      className="inline-flex h-10 items-center justify-center gap-2 whitespace-nowrap rounded bg-gray-800  px-5 text-sm font-medium tracking-wide text-white shadow-md shadow-emerald-200 transition duration-300 hover:bg-gray-600 hover:shadow-sm hover:shadow-emerald-200 focus:bg-gray-700 focus:shadow-sm focus:shadow-emerald-200 focus-visible:outline-none disabled:cursor-not-allowed disabled:border-blue-300 disabled:bg-emerald-300 disabled:shadow-none"
+                    >
+                      <span>Sign In</span>
+                    </Link>
                   </div>
-                </>
-              ) : (
-                <div className="ml-auto hidden lg:flex items-center px-6 lg:ml-0 lg:p-0">
-                  <Link
-                    to="/login"
-                    className="inline-flex h-10 items-center justify-center gap-2 whitespace-nowrap rounded bg-gray-800  px-5 text-sm font-medium tracking-wide text-white shadow-md shadow-emerald-200 transition duration-300 hover:bg-gray-600 hover:shadow-sm hover:shadow-emerald-200 focus:bg-gray-700 focus:shadow-sm focus:shadow-emerald-200 focus-visible:outline-none disabled:cursor-not-allowed disabled:border-blue-300 disabled:bg-emerald-300 disabled:shadow-none"
-                  >
-                    <span>Sign In</span>
-                  </Link>
-                </div>
-              )}
+                )}
               </div>
-              
             </div>
           </nav>
         </div>
