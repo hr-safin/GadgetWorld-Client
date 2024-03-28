@@ -74,7 +74,7 @@ const AllBrand = () => {
   const handleNextPage = () => {
     setCurrentPage((prev) => Math.min(prev + 1, totalPage));
   };
-  return (
+  return  (
     <div>
       <div className=" pb-10 pt-6 flex gap-3 flex-col justify-center items-center ">
         <h3 className="text-2xl te lg:text-4xl font-bold">Popular Brand</h3>
