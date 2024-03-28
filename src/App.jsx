@@ -19,6 +19,7 @@ import {
   useQuery,
 } from "@tanstack/react-query";
 import AllBrand from "./Components/AllBrand/AllBrand";
+import { BeatLoader } from "react-spinners";
 
 const queryClient = new QueryClient();
 function App() {
@@ -112,7 +113,9 @@ function App() {
 
   return loading ? (
     <div className=" text-blue-600 text-3xl bg-gray-900 h-screen flex justify-center items-center">
-      <span className="loading loading-dots loading-lg"></span>
+      <span>
+      <BeatLoader color="#2563EB" />
+      </span>
     </div>
   ) : (
     <QueryClientProvider client={queryClient}>
