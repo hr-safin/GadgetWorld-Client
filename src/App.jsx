@@ -27,6 +27,7 @@ function App() {
 
   useEffect(() => {
     setLoading(true);
+    
     setTimeout(() => {
       setLoading(false);
     }, 1000);
@@ -101,6 +102,7 @@ function App() {
             <PrivateRouter>
               <Details />
             </PrivateRouter>
+
           ),
           loader: ({ params }) =>
             fetch(
